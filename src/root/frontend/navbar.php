@@ -12,6 +12,7 @@
                 <li class="nav-item  pl-1">
                     <a class="nav-link" href="#">News</a>
                 </li>
+
                 <li class="nav-item pl-1">
                     <a class="nav-link" href="#">FAQ</a>
                 </li>
