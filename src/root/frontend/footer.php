@@ -28,13 +28,9 @@
                     <div class="card bg-secondary border-0">
                         <div class="card-body text-center">
                             <h5 class="card-title text-white display-4" style="font-size:30px">Social Media</h5>
-
                             <a class="text-light" href="#"><i class="fa fa-facebook-square fa-fw fa-2x"></i></a>
-
                             <a class="text-light" href="#"><i class="fa fa-twitter-square fa-fw fa-2x"></i></a>
-
                             <a class="text-light" href="#"><i class="fa fa-instagram fa-fw fa-2x"></i></a>
-
                             <a class="text-light" href="#"><i class="fa fa-linkedin fa-fw fa-2x"></i></a>
 
                         </div>
