@@ -4,6 +4,7 @@
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#nvbCollapse" aria-controls="nvbCollapse">
             <span class="navbar-toggler-icon"></span>
         </button>
+
         <div class="collapse navbar-collapse justify-content-end" id="nvbCollapse">
             <ul class="navbar-nav ml-auto">
                 <li class="nav-item active pl-1">
@@ -12,7 +13,6 @@
                 <li class="nav-item  pl-1">
                     <a class="nav-link" href="#">News</a>
                 </li>
-
                 <li class="nav-item pl-1">
                     <a class="nav-link" href="#">FAQ</a>
                 </li>
