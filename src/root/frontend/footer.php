@@ -9,7 +9,6 @@
                             <p class="d-inline lead">All Rights Reserved  © 2024<br>
                                 <a href="#" class="text-light d-block lead">Blog</a>
                             </p>
-
                         </div>
                     </div>
                 </div>
@@ -32,7 +31,6 @@
                             <a class="text-light" href="#"><i class="fa fa-twitter-square fa-fw fa-2x"></i></a>
                             <a class="text-light" href="#"><i class="fa fa-instagram fa-fw fa-2x"></i></a>
                             <a class="text-light" href="#"><i class="fa fa-linkedin fa-fw fa-2x"></i></a>
-
                         </div>
                     </div>
                 </div>

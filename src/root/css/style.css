@@ -30,7 +30,7 @@ h1, h2 {
 }
 .container2 {
     max-width: 800px;
-    margin: 10px auto;
+    margin: 5px auto;
     padding: 0 20px;
 }
 ul {
@@ -48,8 +48,146 @@ ul li {
     border-radius: 27px 61px 27px 53px;
     -webkit-border-radius: 27px 61px 27px 53px;
     -moz-border-radius: 27px 61px 27px 53px;
-    padding: 20px;
-    margin: 20px 0;
+    padding: 22px;
+    margin: 22px 0;
     background-color: #967e7e;
+    font-size: 24px;
 
+
+}
+
+
+.image-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+/* Neu hinzugefügte CSS-Regel für die Boxen der Icons */
+.icon-box {
+    background-color: #fff; /* Hintergrundfarbe */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Leichter Schatten */
+    border-radius: 10px; /* Abgerundete Ecken */
+    padding: 20px; /* Innenabstand */
+    margin-right: 20px; /* Rechter Außenabstand zwischen den Boxen */
+}
+
+
+.icon-box {
+    background-color: #fff; /* Hintergrundfarbe */
+    border-radius: 8px; /* Abgerundete Ecken */
+    padding: 20px; /* Innenabstand */
+    margin-right: 20px; /* Rechter Außenabstand zwischen den Boxen */
+    transition: box-shadow 0.6s ease; /* Übergangseffekt für den Schatten */
+}
+
+/* CSS-Regel für den Schatteneffekt beim Hover */
+.icon-box:hover {
+    box-shadow: 0 4px 8px rgb(220, 112, 25); /* Animierter Schatten beim Hover */
+}
+
+
+.header2 {
+    color: #110c07;
+    font-size: 38px;
+    padding: 10px 0;
+    margin-bottom: 50px;
+    text-align: center;
+}
+
+
+.max-width-img {
+    max-width: 100%; /* Setzt maximale Breite auf 100% */
+    height: auto; /* Behält das Seitenverhältnis bei */
+}
+
+
+
+
+/* CSS für die Animation */
+@keyframes slideInFromLeft {
+    0% {
+        opacity: 0;
+        transform: translateX(-50px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+.welcome-text {
+    font-size: 42px;
+    color: #110c07;
+    text-align: center;
+    animation: slideInFromLeft 2s ease-out 3 alternate;
+
+}
+
+
+
+.alltext{
+    color: #110c07;
+    font-size: 26px;
+    padding: 50px 0px;
+    margin-bottom: 50px;
+    text-align: center;
+
+}
+
+
+
+
+.warum-all {
+    position: relative;
+    width: 100%; /* Breite anpassen */
+    height: 500px; /* Höhe anpassen */
+    overflow: hidden;
+    margin-top: 50px; /* Abstand zum vorherigen Element */
+}
+
+.warum-text {
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+}
+
+.cover {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url('../img/photo1.jpg'); /* Pfad zu deinem Bild */
+    background-size: cover;
+    background-position: center;
+    transition: opacity 0.5s ease;
+}
+
+.warum-text:hover .cover {
+    opacity: 0.5; /* Bild auf 70% Opazität beim Hover */
+}
+
+.cover h2,
+.cover ul {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: rgb(17, 12, 7); /* Weiße Schriftfarbe mit 90% Opazität */
+    text-align: center;
+    z-index: 1; /* Text über dem Bild anzeigen */
+    opacity: 1; /* Opazität des Textes auf 100% setzen */
+    font-weight: bolder;
+    font-size: 24px;
+}
+
+
+.cover ul li {
+    margin-bottom: 10px;
 }
