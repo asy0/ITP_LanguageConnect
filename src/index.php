@@ -16,13 +16,11 @@
          <?php include './root/frontend/navbar.php'; ?>
      </header>
 
-      <div class="container">
-         <br><br><br><div class="half-page-background">
-                    </div>
-
+      <div class="contain"><br><br><br><div class="half-page-background"></div>
          <div class="row justify-content-end">
-             <br/><div class="col-md-8">
-                 <br/><h1>Willkommen bei LanguageConnect!</h1>
+             <br/><div class="col-md-10">
+                 <br/><br/><h1 class="welcome-text"><b>Willkommen bei LanguageConnect!</b></h1><br/>
+
                  <p class="box-shad"> Herzlich willkommen bei LanguageConnect – Ihrem Tor zur Welt der Sprachen!
                      Wir sind eine führende Sprachschule, die sich der Bereicherung des Lebens durch Sprachen
                      verschrieben hat. Egal, ob Sie Ihre Karrierechancen erweitern, reisen oder
@@ -31,29 +29,126 @@
                  </p>
              </div>
 
-             <div class="container2">
-                 <h2><b>Unsere Mission</b></h2>
-                 <p>Unsere Mission bei LanguageConnect ist es, unseren Schülern ein einzigartiges und
+             <div class="col-md-12">
+                 <br/><br/><br/>
+                 <div class="container2"><br/>
+                     <h2 class="header2"><b>Unsere Mission</b></h2>
+                     <div class="image-container">
+                         <div class="icon-box"> <!-- Box für das erste Icon -->
+                             <script src="https://cdn.lordicon.com/fudrjiwc.js"></script>
+                             <lord-icon
+                                     src="https://cdn.lordicon.com/pbbsmkso.json"
+                                     trigger="hover"
+                                     colors="primary:#c76f16,secondary:#c76f16"
+                                     style="width:180px;height:170px">
+                             </lord-icon>
+                         </div>
+                         <div class="icon-box"> <!-- Box für das zweite Icon -->
+                             <img width="180" height="180" src="https://img.icons8.com/carbon-copy/100/language.png" alt="language"/>
+                         </div>
+                         <div class="icon-box"> <!-- Box für das dritte Icon -->
+                             <lord-icon
+                                     src="https://cdn.lordicon.com/kiynvdns.json"
+                                     trigger="hover"
+                                     stroke="light"
+                                     colors="primary:#121331,secondary:#5c460a,tertiary:#ffc738,quaternary:#e88c30,quinary:#ebe6ef"
+                                     style="width:180px;height:170px">
+                             </lord-icon>
+                         </div>
+                     </div>
+                 </div><br/> <br/>
+
+                 <p class="alltext col-md-12" style="text-align: center">
+                     Unsere Mission bei LanguageConnect ist es, unseren Schülern ein einzigartiges und
                      bereicherndes Sprachlernerlebnis zu bieten. Wir glauben daran, dass Sprachen nicht
                      nur ein Kommunikationswerkzeug sind, sondern auch eine Brücke zu neuen Erfahrungen und
                      Perspektiven darstellen. Durch unsere engagierten Lehrer und innovative Lernmethoden helfen wir
-                     Ihnen dabei, Ihre Ziele zu erreichen und Ihr volles Potenzial zu entfalten.</p>
+                     Ihnen dabei, Ihre Ziele zu erreichen und Ihr volles Potenzial zu entfalten.
+                 </p>
+             </div>
 
-                 <h2>Unser Angebot</h2>
-                 <p>Bei LanguageConnect bieten wir eine breite Palette von Sprachkursen für alle Altersgruppen
+
+             <h2 class="header2"><b>Warum LanguageConnect?</b></h2>
+             <div class="warum-all">
+                 <div class="warum-text">
+                     <div class="cover">
+                         <ul>
+                             <li>Erfahrene und qualifizierte Lehrkräfte</li>
+                             <li>Kleine Klassengrößen für eine persönliche Lernerfahrung</li>
+                             <li>Innovative Unterrichtsmethoden und modernste Lernressourcen</li>
+                             <li>Eine unterstützende und motivierende Lernumgebung</li>
+                             <li>Flexible Kurszeiten und maßgeschneiderte Programme</li>
+                         </ul>
+                     </div>
+                 </div>
+             </div>
+
+
+
+
+
+             <!--NEWSLETTER falls wir das noch einbauen wollen
+                 <div class="container">
+                     <h2 class="header2"><b>Unsere Kurse</b></h2>
+                     <div class="row">
+                         <div class="col-md-4">
+                             <div class="card">
+                                 <img src="./root/img/photo4.jpg" class="card-img-top" alt="...">
+                                 <div class="card-body">
+                                     <h5 class="card-title">Englischkurse</h5>
+                                     <p class="card-text">Unsere Englischkurse sind darauf ausgerichtet, Ihre
+                                         Kommunikationsfähigkeiten in der englischen Sprache zu verbessern und
+                                         Ihnen die nötigen Fähigkeiten zu vermitteln, um sich in einem
+                                         englischsprachigen Umfeld zurechtzufinden.</p>
+                                     <a href="#" class="btn btn-primary">Mehr erfahren</a>
+                                 </div>
+                             </div>
+                         </div>
+                         <div class="col-md-4">
+                             <div class="card">
+                                 <img src="./root/img/photo5.jpg" class="card-img-top" alt="...">
+                                 <div class="card-body">
+                                     <h5 class="card-title
+                                     ">Deutschkurse</h5>
+
+ <p class="card-text">Unsere Deutschkurse sind darauf ausgerichtet, Ihre
+                                         Kommunikationsfähigkeiten in der deutschen Sprache zu verbessern und
+                                         Ihnen die nötigen Fähigkeiten zu vermitteln, um sich in einem
+                                         deutschsprachigen Umfeld zurechtzufinden.</p>
+                                     <a href="#" class="btn btn-primary">Mehr erfahren</a>
+                                 </div>
+                             </div>
+                         </div>
+                         <div class="col-md-4">
+                             <div class="card">
+                                 <img src="./root/img/photo6.jpg" class="card-img-top" alt="...">
+                                 <div class="card-body">
+                                     <h5 class="card-title
+                                     ">Spanischkurse</h5>
+                                     <p class="card-text">Unsere Spanischkurse sind darauf ausgerichtet, Ihre
+                                         Kommunikationsfähigkeiten in der spanischen Sprache zu verbessern und
+                                         Ihnen die nötigen Fähigkeiten zu vermitteln, um sich in einem
+                                         spanischsprachigen Umfeld zurechtzufinden.</p>
+
+ <a href="#" class="btn btn-primary">Mehr erfahren</a>
+                                 </div>
+                             </div>
+                         </div>
+                     </div>
+                 </div>
+
+   -->
+
+
+
+             <h2 class="header2"><br/><b>Unser Angebot</b></h2>
+                 <p class=" alltext col-md-12" style="text-align: center"> Bei LanguageConnect bieten wir eine breite Palette von Sprachkursen für alle Altersgruppen
                      und Sprachniveaus an. Von Anfänger- bis Fortgeschrittenenkursen in verschiedenen
                      Sprachen – darunter Englisch, Deutsch, Spanisch, Französisch und viele mehr – ist für
                      jeden etwas dabei. Unsere flexiblen Kurszeiten und maßgeschneiderten Lernprogramme
                      ermöglichen es Ihnen, Ihren Unterricht an Ihren individuellen Zeitplan anzupassen.</p>
 
-                 <h2>Warum LanguageConnect?</h2>
-                 <ul>
-                     <li>Erfahrene und qualifizierte Lehrkräfte</li>
-                     <li>Kleine Klassengrößen für eine persönliche Lernerfahrung</li>
-                     <li>Innovative Unterrichtsmethoden und modernste Lernressourcen</li>
-                     <li>Eine unterstützende und motivierende Lernumgebung</li>
-                     <li>Flexible Kurszeiten und maßgeschneiderte Programme</li>
-                 </ul>
+
                  <div class="col-md-6">
                      <img src="./root/img/photo7.png" alt="Bildbeschreibung">
                  </div>
@@ -66,6 +161,8 @@
                      um mehr über unsere Kurse und Angebote zu erfahren oder vereinbaren Sie gleich eine kostenlose
                      Probestunde!
                  </p>
+
+               </div>
              </div>
          </div>
       </div>
