@@ -4,7 +4,7 @@
 <head>
 <?php
     include 'src\root\frontend\navbar.php';
-    include 'src\root\frontend\footer.php';
+   
 ?>
 
 </head>
@@ -57,7 +57,7 @@ echo $message;
         <button type="submit" class="btn btn-primary" value="registrieren">Registrierung abschließen</button>
       </form>
 
+
+    <?php include './root/frontend/footer.php'; ?>
 </body>
-
-
 </html>
