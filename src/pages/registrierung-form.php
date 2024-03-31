@@ -2,6 +2,11 @@
 <!DOCTYPE html>
 <html>
 <head>
+<?php
+    include 'src\root\frontend\navbar.php';
+    include 'src\root\frontend\footer.php';
+?>
+
 </head>
 <body>
 <h1>Registrierung</h1><br><br>
