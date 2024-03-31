@@ -21,9 +21,15 @@ footer .cizgi { border-right: 1px solid #71777e; }
     align-items: center;
     color: white; /* Textfarbe */
     text-align: center;
+    margin: 18px;
+    padding: 10px;
 }
 
 
+
+.contain {
+    padding: 10px;
+}
 
 h1, h2 {
     color: #333;
@@ -44,12 +50,12 @@ ul li {
 
 
 .box-shad{
-    box-shadow: rgb(38, 57, 77) 0px 20px 30px -10px;
+    box-shadow: rgb(38, 57, 77) 0 20px 30px -10px;
     border-radius: 27px 61px 27px 53px;
     -webkit-border-radius: 27px 61px 27px 53px;
     -moz-border-radius: 27px 61px 27px 53px;
-    padding: 22px;
-    margin: 22px 0;
+    padding: 24px;
+    margin: 22px 10px;
     background-color: #967e7e;
     font-size: 24px;
 
@@ -128,14 +134,23 @@ ul li {
 .alltext{
     color: #110c07;
     font-size: 26px;
-    padding: 50px 0px;
-    margin-bottom: 50px;
+    padding: 50px 15px;
+    margin-bottom: 30px;
     text-align: center;
+
 
 }
 
 
 
+.header3{
+    color: #110c07;
+    font-size: 34px;
+    padding: 10px 0;
+    margin-top: 8px;
+    margin-bottom: 10px;
+    text-align: center;
+}
 
 .warum-all {
     position: relative;
@@ -154,6 +169,7 @@ ul li {
     display: flex;
     align-items: center;
     justify-content: center;
+    font-size: 26px;
 
 }
 
@@ -169,25 +185,59 @@ ul li {
     transition: opacity 0.5s ease;
 }
 
-.warum-text:hover .cover {
-    opacity: 0.5; /* Bild auf 70% Opazität beim Hover */
+
+
+
+
+
+
+
+
+
+
+.text-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-color: rgba(0, 0, 0, 0.5); /* Hintergrundfarbe für Textoverlay */
+    color: white;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+    box-sizing: border-box;
 }
 
-.cover h2,
-.cover ul {
+.text-overlay ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
+
+.text-overlay ul li {
+    margin-bottom: 10px;
+}
+
+.cont {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 50vh; /* Setzen der Höhe auf die volle Bildschirmhöhe */
+}
+
+.animation-gif {
+    position: relative;
+    width: 100%;
+    max-width: 300px; /* Maximale Breite des GIFs */
+    height: 300px;
+    overflow: hidden;
+}
+
+.animation-gif script {
     position: absolute;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-    color: rgb(17, 12, 7); /* Weiße Schriftfarbe mit 90% Opazität */
-    text-align: center;
-    z-index: 1; /* Text über dem Bild anzeigen */
-    opacity: 1; /* Opazität des Textes auf 100% setzen */
-    font-weight: bolder;
-    font-size: 24px;
-}
-
-
-.cover ul li {
-    margin-bottom: 10px;
 }
