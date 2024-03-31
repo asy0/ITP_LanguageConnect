@@ -16,11 +16,11 @@
          <?php include './root/frontend/navbar.php'; ?>
      </header>
 
-      <div class="contain"><br><br><br><div class="half-page-background"></div>
+      <div class="contain"><br><br><br>
+         <div class="half-page-background"><br/></div><br/>
          <div class="row justify-content-end">
              <br/><div class="col-md-10">
-                 <br/><br/><h1 class="welcome-text"><b>Willkommen bei LanguageConnect!</b></h1><br/>
-
+                <br/><br/><h1 class="welcome-text"><b>Willkommen bei LanguageConnect!</b></h1><br/>
                  <p class="box-shad"> Herzlich willkommen bei LanguageConnect – Ihrem Tor zur Welt der Sprachen!
                      Wir sind eine führende Sprachschule, die sich der Bereicherung des Lebens durch Sprachen
                      verschrieben hat. Egal, ob Sie Ihre Karrierechancen erweitern, reisen oder
@@ -58,7 +58,7 @@
                      </div>
                  </div><br/> <br/>
 
-                 <p class="alltext col-md-12" style="text-align: center">
+                 <p class=" alltext col-md-12" style="text-align: center">
                      Unsere Mission bei LanguageConnect ist es, unseren Schülern ein einzigartiges und
                      bereicherndes Sprachlernerlebnis zu bieten. Wir glauben daran, dass Sprachen nicht
                      nur ein Kommunikationswerkzeug sind, sondern auch eine Brücke zu neuen Erfahrungen und
@@ -66,12 +66,13 @@
                      Ihnen dabei, Ihre Ziele zu erreichen und Ihr volles Potenzial zu entfalten.
                  </p>
              </div>
-
+            </div>
 
              <h2 class="header2"><b>Warum LanguageConnect?</b></h2>
              <div class="warum-all">
                  <div class="warum-text">
                      <div class="cover">
+                         <div class="text-overlay">
                          <ul>
                              <li>Erfahrene und qualifizierte Lehrkräfte</li>
                              <li>Kleine Klassengrößen für eine persönliche Lernerfahrung</li>
@@ -79,68 +80,12 @@
                              <li>Eine unterstützende und motivierende Lernumgebung</li>
                              <li>Flexible Kurszeiten und maßgeschneiderte Programme</li>
                          </ul>
+                         </div>
                      </div>
                  </div>
              </div>
 
-
-
-
-
-             <!--NEWSLETTER falls wir das noch einbauen wollen
-                 <div class="container">
-                     <h2 class="header2"><b>Unsere Kurse</b></h2>
-                     <div class="row">
-                         <div class="col-md-4">
-                             <div class="card">
-                                 <img src="./root/img/photo4.jpg" class="card-img-top" alt="...">
-                                 <div class="card-body">
-                                     <h5 class="card-title">Englischkurse</h5>
-                                     <p class="card-text">Unsere Englischkurse sind darauf ausgerichtet, Ihre
-                                         Kommunikationsfähigkeiten in der englischen Sprache zu verbessern und
-                                         Ihnen die nötigen Fähigkeiten zu vermitteln, um sich in einem
-                                         englischsprachigen Umfeld zurechtzufinden.</p>
-                                     <a href="#" class="btn btn-primary">Mehr erfahren</a>
-                                 </div>
-                             </div>
-                         </div>
-                         <div class="col-md-4">
-                             <div class="card">
-                                 <img src="./root/img/photo5.jpg" class="card-img-top" alt="...">
-                                 <div class="card-body">
-                                     <h5 class="card-title
-                                     ">Deutschkurse</h5>
-
- <p class="card-text">Unsere Deutschkurse sind darauf ausgerichtet, Ihre
-                                         Kommunikationsfähigkeiten in der deutschen Sprache zu verbessern und
-                                         Ihnen die nötigen Fähigkeiten zu vermitteln, um sich in einem
-                                         deutschsprachigen Umfeld zurechtzufinden.</p>
-                                     <a href="#" class="btn btn-primary">Mehr erfahren</a>
-                                 </div>
-                             </div>
-                         </div>
-                         <div class="col-md-4">
-                             <div class="card">
-                                 <img src="./root/img/photo6.jpg" class="card-img-top" alt="...">
-                                 <div class="card-body">
-                                     <h5 class="card-title
-                                     ">Spanischkurse</h5>
-                                     <p class="card-text">Unsere Spanischkurse sind darauf ausgerichtet, Ihre
-                                         Kommunikationsfähigkeiten in der spanischen Sprache zu verbessern und
-                                         Ihnen die nötigen Fähigkeiten zu vermitteln, um sich in einem
-                                         spanischsprachigen Umfeld zurechtzufinden.</p>
-
- <a href="#" class="btn btn-primary">Mehr erfahren</a>
-                                 </div>
-                             </div>
-                         </div>
-                     </div>
-                 </div>
-
-   -->
-
-
-
+          <div class="contain">
              <h2 class="header2"><br/><b>Unser Angebot</b></h2>
                  <p class=" alltext col-md-12" style="text-align: center"> Bei LanguageConnect bieten wir eine breite Palette von Sprachkursen für alle Altersgruppen
                      und Sprachniveaus an. Von Anfänger- bis Fortgeschrittenenkursen in verschiedenen
@@ -149,24 +94,24 @@
                      ermöglichen es Ihnen, Ihren Unterricht an Ihren individuellen Zeitplan anzupassen.</p>
 
 
-                 <div class="col-md-6">
-                     <img src="./root/img/photo7.png" alt="Bildbeschreibung">
-                 </div>
+                    <div class="cont">
+                      <div class="animation-gif">
+                      <script src="https://unpkg.com/@dotlottie/player-component@latest/dist/dotlottie-player.mjs" type="module"></script>
+                      <dotlottie-player src="https://lottie.host/ee7d8b73-a205-4adc-aafb-e1158ef14de5/Y8iVoHg3WL.json" background="transparent" speed="1" style="width: 300px; height: 300px;" loop autoplay></dotlottie-player>
+                      </div>
+                    </div>
 
-                 <h2>Beginnen Sie Ihre Sprachreise noch heute</h2>
-                 <p>Egal, ob Sie eine neue Sprache lernen, Ihre Kenntnisse verbessern oder sich auf internationale
+              <h3 class="header3"><b>Beginnen Sie Ihre Sprachreise noch heute</b></h3>
+                 <p class=" alltext col-md-12" style="text-align: center">
+                     Egal, ob Sie eine neue Sprache lernen, Ihre Kenntnisse verbessern oder sich auf internationale
                      Prüfungen vorbereiten möchten – bei LanguageConnect sind Sie genau richtig.
                      Treten Sie noch heute unserer Sprachgemeinschaft bei und entdecken Sie die endlosen
                      Möglichkeiten, die Ihnen die Beherrschung einer neuen Sprache eröffnet. Kontaktieren Sie uns,
                      um mehr über unsere Kurse und Angebote zu erfahren oder vereinbaren Sie gleich eine kostenlose
                      Probestunde!
                  </p>
-
                </div>
              </div>
-         </div>
-      </div>
-
 
      <!--- Footer --->
      <?php include './root/frontend/footer.php'; ?>
