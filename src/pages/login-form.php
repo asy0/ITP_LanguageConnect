@@ -3,8 +3,7 @@
 <head>
     <?php
     include 'src\root\frontend\navbar.php';
-    include 'src\root\frontend\footer.php';
-    ?>
+     ?>
 
 </head>
 <body>
@@ -51,7 +50,7 @@
 </div>
 
 
-
+<?php include './root/frontend/footer.php'; ?>
 </body>
 
 </html>
