@@ -44,8 +44,8 @@
 <h2 align="left" style="margin-bottom: 0;">Kontakt:</h2>
 <p align="left" style="margin-top: 0;">
     Kundeninformationscenter: +43 (0)800 -22 52 53<br>
-    Mo-Samstag 08:00 bis 18:00 Uhr
-    Soontag und Feiertags geschlossen.
+    Mo-Samstag 08:00 bis 18:00 Uhr<br>
+    Soontag und Feiertags geschlossen.<br>
     Telefon: +43(0)623 -73 33-0<br>
     Fax: +43(0)662 -83 83-295<br>
 </p>
