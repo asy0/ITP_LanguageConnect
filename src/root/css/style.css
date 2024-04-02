@@ -266,3 +266,17 @@ ul li {
 
 
 
+
+/*Impressum*/
+.header-imp{
+    color: #110c07;
+    margin: auto;
+}
+
+.impressum-container{
+    color: #110c07;
+    margin-top: 30px;
+    padding: 50px 15px;
+    margin-bottom: 30px;
+    text-align: center;
+}
