@@ -17,7 +17,7 @@
                     <a class="nav-link" href="#">FAQ</a>
                 </li>
                 <li class="nav-item pl-1">
-                    <a class="nav-link" href="#">İmpressum</a>
+                    <a class="nav-link" href="impressum.php">İmpressum</a>
                 </li>
                 <li class="nav-item pl-1">
                     <a class="nav-link" href="./login-form.php"><i class="fa fa-user fa-fw mr-1"></i>Anmelden</a>
