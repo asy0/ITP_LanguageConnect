@@ -280,3 +280,13 @@ ul li {
     margin-bottom: 30px;
     text-align: center;
 }
+
+
+.center {
+    text-align: center;
+}
+.left-align {
+    text-align: left;
+    margin-bottom: 0;
+    margin-top: 0;
+}
