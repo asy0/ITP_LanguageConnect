@@ -3,14 +3,14 @@
 <head>
     <meta charset="UTF-8">
     <title>Hilfe</title>
-    <link rel="stylesheet" href="helpstyle.css">
+    <link rel="stylesheet" href="../css/style.css">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
 </head>
 <body>
 <header>
     <?php
-        include 'navbar.php';
-        ?>
+    include 'navbar.php';
+    ?>
 </header>
 <main>
     <h1>Hilfe / FAQ</h1>
@@ -46,8 +46,9 @@
     <p><em>Ihre Daten sind durch fortschrittliche Sicherheitsmaßnahmen geschützt und werden vertraulich behandelt.</em></p>
 </main>
 <footer>
-    <a id="hilfe" href="Hilfeseite.html">Hilfe</a>
-    <a id="impressum" href="impressum.php">Impressum</a>
+    <footer class="center">
+        <?php include './footer.php'; ?>
+    </footer>
 </footer>
 </body>
 </html>
