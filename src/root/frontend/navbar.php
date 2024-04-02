@@ -14,7 +14,7 @@
                     <a class="nav-link" href="#">News</a>
                 </li>
                 <li class="nav-item pl-1">
-                    <a class="nav-link" href="#">FAQ</a>
+                    <a class="nav-link" href="hilfeseite.php">FAQ</a>
                 </li>
                 <li class="nav-item pl-1">
                     <a class="nav-link" href="impressum.php">İmpressum</a>
