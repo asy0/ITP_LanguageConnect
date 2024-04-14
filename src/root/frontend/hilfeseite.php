@@ -17,21 +17,7 @@
     ?>
 </header>
 <main>
-    <br/><h1>FAQ</h1>
-    <br /><div class="hilfecontainer">
-        <div class="accordion" id="faqAccordion">
-            <div class="accordion-item">
-                <h2 class="accordion-header" id="headingOne">
-                    <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
-                        1. Wie erstelle ich ein Konto bei LanguageConnect?
-                    </button>
-                </h2>
-                <div id="collapseOne" class="accordion-collapse collapse show" aria-labelledby="headingOne" data-bs-parent="#faqAccordion">
-                    <div class="accordion-body">
-                        Gehen Sie auf die Startseite, klicken Sie auf „Registrieren“ und folgen Sie den Anweisungen.
-                    </div>
-                </div>
-            </div>
+    <h1>Hilfe / FAQ</h1>
 
             <div class="accordion-item">
                 <h2 class="accordion-header" id="headingTwo">
@@ -45,6 +31,8 @@
                     </div>
                 </div>
             </div>
+    <h4>1. Wie erstelle ich ein Konto bei LanguageConnect?</h4>
+    <p><em>Gehen Sie auf die Startseite, klicken Sie auf „Registrieren“ und folgen Sie den Anweisungen.</em></p>
 
             <div class="accordion-item">
                 <h2 class="accordion-header" id="headingThree">
