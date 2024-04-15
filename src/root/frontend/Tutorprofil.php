@@ -23,7 +23,7 @@
     <div class="profile-info">
         <p>Anrede: </p>
         <p>Name: </p>
-        <p>Geschlecht: /p>
+        <p>Geschlecht: </p>
         <p>Telefon: </p>
         <p>E-Mail: </p>
         <p>Stundenlohn: </p>
