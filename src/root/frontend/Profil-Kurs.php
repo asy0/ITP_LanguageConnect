@@ -20,8 +20,8 @@
 <main>
 
     <div class="buttonbox">
-    <a href="profile.html" class="button">Profilansicht</a>
-    <a href="course_list.html" class="button">Kursliste</a>
+    <a href="Tutorprofil.php" class="button">Profilansicht</a>
+    <a href="" class="button">Kursliste</a>
     </div>
 </main>
 
