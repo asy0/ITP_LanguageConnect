@@ -11,8 +11,8 @@ $password = $_POST['pwd'];
 $passwordconfirm = $_POST['pwdconfirm'];
 
 
-if(strlen($password) > 100){
-    $message = "Das Passwort darf nicht über 100 Zeichen haben. Bitte versuche es erneut.";
+if(strlen($password) > 100 || strlen($password) < 8){
+    $message = "Das Passwort muss mindestens 8 Zeichen und nicht über 100 Zeichen haben. Bitte versuche es erneut.";
     header("Location: ../../frontend/registrierung-form.php");
 }
 
