@@ -10,8 +10,6 @@
         <title>LanguageConnect</title>
     </head>
 
-    
-
     <body>
      <header>
         <!--- Navbar --->
