@@ -10,6 +10,12 @@ $email = $_POST['email'];
 $password = $_POST['pwd'];
 $passwordconfirm = $_POST['pwdconfirm'];
 
+
+if(strlen($password) > 100){
+    $message = "Das Passwort darf nicht über 100 Zeichen haben. Bitte versuche es erneut.";
+    header("Location: ../../frontend/registrierung-form.php");
+}
+
 // Überprüfen, ob die Passwörter übereinstimmen
 if ($password !== $passwordconfirm) {
     $message = "Die Passwörter stimmen nicht überein. Bitte versuche es erneut.";
