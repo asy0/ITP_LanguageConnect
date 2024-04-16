@@ -34,7 +34,7 @@
         <?php endif; ?>
 
 
-        <form action="..\backend\actions/login.php" method="post">
+        <form action="../backend/actions/login.php" method="post">
             <div class="form-group">
                 <label for="username">Username </label>
                 <input type="text" id="username" name="username"
