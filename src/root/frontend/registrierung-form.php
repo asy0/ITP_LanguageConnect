@@ -26,7 +26,8 @@ echo $message;
 }
 ?>
 
-        <form action="index.php?action=registrierung" method="post">
+<form action="..\backend\actions/registrierung.php" method="post">
+
 
         <div class="mb-4 " >
             <label for="foa" class="form-label" ><b>Anrede</b></label>
