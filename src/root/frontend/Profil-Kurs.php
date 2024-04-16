@@ -22,7 +22,6 @@
     <div class="buttonbox">
     <a href="Tutorprofil.php" class="button">Profilansicht</a>
     <a href="" class="button">Kursliste</a>
-
     </div>
 </main>
 
