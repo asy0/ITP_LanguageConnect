@@ -9,7 +9,6 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
     $db = getDBConnection();
 
-    // SQL-Statement wird prepared und eingebunden
     $sql = "SELECT * FROM users WHERE Username = ?";
     $stmt = $db->prepare($sql);
     $stmt->bind_param("s", $username);
