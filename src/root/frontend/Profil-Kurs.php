@@ -11,31 +11,18 @@
 </head>
 
 
-<body class="tutor-profile-body">
+<body>
 <header>
     <!--- Navbar --->
     <?php include './navbar.php'; ?>
 </header>
 
 <main>
-<div class="profile-container">
-    <h1>Mein Profil</h1>
-    <div class="profile-info">
-        <p>Anrede: </p>
-        <p>Name: </p>
-        <p>Geschlecht: </p>
-        <p>Telefon: </p>
-        <p>E-Mail: </p>
-        <p>Stundenlohn: </p>
-        <p>Anzahl der Kurse:</p>
-        <p>Spezialisierungen:</p>
-        <p>Verfügbarkeit: </p>
-        <p>Sprachkenntnisse: </p>
-        <p>Bildungsabschluss: </p>
 
+    <div class="buttonbox">
+    <a href="Tutorprofil.php" class="button">Profilansicht</a>
+    <a href="" class="button">Kursliste</a>
     </div>
-</div>
-
 </main>
 
 <footer>
@@ -45,4 +32,5 @@
 
 </body>
 </html>
+
 
