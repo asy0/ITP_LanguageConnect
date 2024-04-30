@@ -47,10 +47,6 @@ session_start();
     <a href="../news.php"> News erstellen</a>
     <a href="../news.php">News löschen</a>
 
-
-
-
-
     <a class="active" href="#home" disabled>Tutoren</a>
     <a href="#news"> Status ändern</a>
     <a href="#about">Tutoren anzeigen</a>
