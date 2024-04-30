@@ -1,4 +1,5 @@
 <?php
+session_start();
 $message = '';
 
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
@@ -9,7 +10,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
     $db = getDBConnection();
 
-    $sql = "SELECT * FROM users WHERE Username = ?";
+    $sql = "SELECT * FROM users WHERE username = ?";
     $stmt = $db->prepare($sql);
     $stmt->bind_param("s", $username);
     $stmt->execute();
@@ -23,13 +24,12 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         // Überprüfen, ob der Account inaktiv ist
         if ($row["status"] == 1) {
             $message = "Profil inaktiv, bitte wenden Sie sich an einen Administrator.";
-            header("Location: ../../frontend/login-form.php");
         } else {
             // Account ist aktiv, weiter mit Passwortüberprüfung
             $hashedPasswordInDB = $row["Passwort"];
 
             if (password_verify($password, $hashedPasswordInDB)) {
-                // Variable (isAdmin) wird gesetzt, wenn der user ein Admin ist
+                // Variable (isAdmin) wird gesetzt, wenn der Benutzer ein Admin ist
                 if ($row["admin"] == "1") {
                     $_SESSION['isAdmin'] = true;
                 }
@@ -38,26 +38,26 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
                 $_SESSION['logged_in'] = true;
                 $_SESSION['username'] = $username;
 
-                header("Location: ../../frontend/login-form.php"); //WIRD ERST GEMACHT!! DANN AUF PROFIL AENDERN!
+                header("Location: ../../frontend/login-form.php");
+                exit();
             } else {
                 $failedAttempt = true;
-                header("Location: ../../frontend/login-form.php");
                 $message = "Anmeldung fehlgeschlagen. Bitte überprüfen Sie Benutzername und Passwort.";
             }
         }
     } else {
-        $failedAttempt = true;
-        header("Location: ../../frontend/login-form.php");
-        $message = "Anmeldung fehlgeschlagen. Bitte überprüfen Sie Benutzername und Passwort.";
+        $message = "Benutzername nicht registriert. Bitte registrieren Sie sich zuerst.";
     }
 
     // Statement, Db und alle Resulte aus der DB werden geschlossen
     $stmt->close();
     $result->close();
     $db->close();
-
 }
 
-
-
+// Fehlermeldung wird nur gesetzt, wenn die Anmeldung fehlschlägt
+if (!empty($message)) {
+    header("Location: ../../frontend/start.php");
+    exit();
+}
 
