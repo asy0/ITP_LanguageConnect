@@ -23,7 +23,7 @@ if ($password !== $passwordconfirm) {
     include 'C:\xampp\htdocs\ITP_LanguageConnect\src\root\backend\db_connect.php';
     $db = getDBConnection();
 
-    $checkStmt = $db->prepare("SELECT COUNT(*) FROM users WHERE Username = ?");
+    $checkStmt = $db->prepare("SELECT COUNT(*) FROM users WHERE username = ?");
     $checkStmt->bind_param("s", $benutzername);
     $checkStmt->execute();
     $checkStmt->bind_result($count);
@@ -36,8 +36,9 @@ if ($password !== $passwordconfirm) {
         exit();
     } else {
         $hashedpassword = password_hash($password, PASSWORD_DEFAULT);
-        $stmt = $db->prepare("INSERT INTO users (anrede, firstname, lastname, email, username, password, role) VALUES (?, ?, ?, ?, ?, ?,?)");
-        $stmt->bind_param("sssssss", $anrede, $vorname, $nachname, $email, $username, $hashedpassword, $role);
+        $stmt = $db->prepare("INSERT INTO users (anrede, firstname, lastname, email, username, password, role,status) VALUES (?, ?, ?, ?, ?, ?, ?, 1)");
+        $stmt->bind_param("ssssssss", $anrede, $vorname, $nachname, $email, $username, $hashedpassword, $role, $status);
+
 
         if ($stmt->execute()) {
             $stmt->close();
