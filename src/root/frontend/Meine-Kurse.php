@@ -18,12 +18,22 @@
 </header>
 
 <main>
-    <h1 class="welcome-heading">Welcome<!---name des tutor---></h1>
+    <h1 class="welcome-heading">Meine Kurse</h1>
 
-    <div class="buttonbox">
-    <a href="tutorprofil.php" class="button">Profilansicht</a>
-        <a href="Kursansicht.php" class="button">Kursansicht</a>
-    <a href="Kursliste.php" class="button">Kursliste</a>
+
+    <div class="profile-container">
+
+        <div class="profile-info">
+            <p>Kursname: </p>
+            <p>Sprache: </p>
+            <p>Beschreibung: </p>
+            <p>Zielgruppe: </p>
+            <p>Vorkenntnisse </p>
+            <p>Bezahlung: </p>
+            <p>Kursformat:</p>
+            <p>Kursdauer</p>
+
+        </div>
     </div>
 </main>
 
@@ -36,3 +46,4 @@
 </html>
 
 
+<?php
