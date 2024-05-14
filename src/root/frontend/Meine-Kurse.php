@@ -23,17 +23,35 @@
 
     <div class="profile-container">
 
-        <div class="profile-info">
-            <p>Kursname: </p>
-            <p>Sprache: </p>
-            <p>Beschreibung: </p>
-            <p>Zielgruppe: </p>
-            <p>Vorkenntnisse </p>
-            <p>Bezahlung: </p>
-            <p>Kursformat:</p>
-            <p>Kursdauer</p>
+        <?php
+        include '../../root/backend/db_connect.php';
+        $db = getDBConnection();
+        $currentuser = $_SESSION['username'];
+        $query = "SELECT Kursname, Sprache, Beschreibung, Kursformat, Kursdauer_Anfang, Kursdauer_Ende FROM kurse WHERE Gebucht_von = '$currentuser'";
 
-        </div>
+        // Ausführen der Abfrage
+        $result = mysqli_query($db, $query);
+
+        // Überprüfen, ob Daten vorhanden sind
+        if (mysqli_num_rows($result) > 0) {
+            // Schleife über die Ergebnisse
+            while ($row = mysqli_fetch_assoc($result)) {
+                // Daten in die entsprechenden HTML-Elemente einfügen
+                echo '<div class="profile-info">';
+                echo '<p>Kursname: ' . $row["Kursname"] . '</p>';
+                echo '<p>Sprache: ' . $row["Sprache"] . '</p>';
+                echo '<p>Beschreibung: ' . $row["Beschreibung"] . '</p>';
+                echo '<p>Kursformat: ' . $row["Kursformat"] . '</p>';
+                echo '<p>von: ' . $row["Kursdauer_Anfang"] . '</p>';
+                echo '<p>bis: ' . $row["Kursdauer_Ende"] . '</p>';
+                echo '</div>';
+                echo '<br>';
+            }
+        } else {
+            echo "Keine Daten gefunden.";
+        }
+        ?>
+
     </div>
 </main>
 
@@ -44,6 +62,3 @@
 
 </body>
 </html>
-
-
-<?php

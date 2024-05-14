@@ -17,9 +17,11 @@
 <body>
 
 <div style="margin-left:130px;">
+<br>
+<br>
     <br><h1><b> Herzlich Willkommen  <?php echo $_SESSION['username'] ?>!</b></h1>
 
-    <br><p> LanguageConenct wünscht dir einen schönen Tag... &#128516;&#128525;</p>
+    <br><p> LanguageConnect wünscht dir einen schönen Tag... &#128516;&#128525;</p>
     <br><a href="booknow.php" role="button" type="button" class="btn btn-outline-info" >Jetzt -> ... &#128151; </a> </button>
 
 
