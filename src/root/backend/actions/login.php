@@ -22,11 +22,11 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         $row = $result->fetch_assoc();
 
         // Überprüfen, ob der Account inaktiv ist
-        if ($row["status"] == 1) {
+        if ($row["status"] == 0) {
             $message = "Profil inaktiv, bitte wenden Sie sich an einen Administrator.";
         } else {
             // Account ist aktiv, weiter mit Passwortüberprüfung
-            $hashedPasswordInDB = $row["Passwort"];
+            $hashedPasswordInDB = $row["password"];
 
             if (password_verify($password, $hashedPasswordInDB)) {
                 // Variable (isAdmin) wird gesetzt, wenn der Benutzer ein Admin ist
@@ -38,7 +38,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
                 $_SESSION['logged_in'] = true;
                 $_SESSION['username'] = $username;
 
-                header("Location: ../../frontend/login-form.php");
+                header("Location: ../../backend/userlogged.php");
                 exit();
             } else {
                 $failedAttempt = true;
@@ -55,9 +55,9 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $db->close();
 }
 
-// Fehlermeldung wird nur gesetzt, wenn die Anmeldung fehlschlägt
+/* Fehlermeldung wird nur gesetzt, wenn die Anmeldung fehlschlägt
 if (!empty($message)) {
     header("Location: ../../frontend/start.php");
     exit();
-}
+}*/
 
