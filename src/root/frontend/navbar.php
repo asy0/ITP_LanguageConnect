@@ -21,7 +21,19 @@
                 </li>
                 <?php
                 session_start();
-                if (isset($_SESSION['logged_in'])): ?>
+                if (isset($_SESSION['logged_in']) && $_SESSION['isTutor'] = true): ?>
+                    <li class="nav-item pl-1">
+                    <a class="nav-link" href="../../root/backend/actions/logout.php"><i class="fa fa-sign-out fa-fw mr-1"></i>Abmelden</a>
+                    </li>
+                    <li class="nav-item pl-1">
+                    <a class="nav-link" href="../../root/frontend/Meine-Kurse.php"><i class="fa fa-sign-out fa-fw mr-1"></i>Meine Kurse</a>
+                    </li>
+                    <li class="nav-item pl-1">
+                    <a class="nav-link" href="../../root/frontend/tutorprofil.php"><i class="fa fa-sign-out fa-fw mr-1"></i>Mein Tutorprofil</a>
+                    </li>
+                    <?php endif ?>
+                <?php
+                if (isset($_SESSION['logged_in']) && $_SESSION['isTutor'] != true ): ?>
                     <li class="nav-item pl-1">
                     <a class="nav-link" href="../../root/backend/actions/logout.php"><i class="fa fa-sign-out fa-fw mr-1"></i>Abmelden</a>
                     </li>
