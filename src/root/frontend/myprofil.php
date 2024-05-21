@@ -52,7 +52,7 @@
         }
         ?>
 
-        <form id="updateForm" method="POST" action="../backend/action/update_profile.php">
+        <form id="updateForm" method="POST" action="..\backend\actions\update_profile.php">
             <div class="half-input-container">
                 <div class="form-group">
                     <label for="firstname">Vorname ändern</label>
