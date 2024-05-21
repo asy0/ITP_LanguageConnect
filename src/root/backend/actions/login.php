@@ -30,8 +30,11 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
             if (password_verify($password, $hashedPasswordInDB)) {
                 // Variable (isAdmin) wird gesetzt, wenn der Benutzer ein Admin ist
-                if ($row["admin"] == "1") {
+                if ($row["role"] == "Admin") {
                     $_SESSION['isAdmin'] = true;
+                }
+                if ($row["role"] == "Tutor"){
+                    $_SESSION['isTutor'] = true;
                 }
 
                 $message = "Anmeldung erfolgreich!";
@@ -55,9 +58,9 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $db->close();
 }
 
-/* Fehlermeldung wird nur gesetzt, wenn die Anmeldung fehlschlägt
+// Fehlermeldung wird nur gesetzt, wenn die Anmeldung fehlschlägt
 if (!empty($message)) {
     header("Location: ../../frontend/start.php");
     exit();
-}*/
+}
 
