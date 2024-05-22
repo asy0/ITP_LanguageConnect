@@ -21,8 +21,8 @@
     <h1 class="welcome-heading">Kursansicht von <!---name des tutor---></h1>
 
     <div class="buttonbox">
-        <a href="Meine-Kurse.php" class="button">Meine Kurse</a>
-        <a href="Kurserstellen.php" class="button">Kurs erstellen</a>
+        <a href="meine-kurse.php" class="button">Meine Kurse</a>
+        <a href="kurserstellen.php" class="button">Kurs erstellen</a>
 
     </div>
 </main>

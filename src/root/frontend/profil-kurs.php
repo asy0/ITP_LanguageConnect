@@ -18,12 +18,12 @@
 </header>
 
 <main>
-    <h1 class="welcome-heading">Welcome<!---name des tutor---></h1>
+    <br><br><h1><b> Herzlich Willkommen  <?php echo $_SESSION['username'] ?>!</b></h1>
 
     <div class="buttonbox">
     <a href="tutorprofil.php" class="button">Profilansicht</a>
-        <a href="Kursansicht.php" class="button">Kursansicht</a>
-    <a href="Kursliste.php" class="button">Kursliste</a>
+        <a href="kursansicht.php" class="button">Kursansicht</a>
+    <a href="kursliste.php" class="button">Kursliste</a>
     </div>
 </main>
 
