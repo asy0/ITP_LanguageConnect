@@ -18,7 +18,7 @@
 </header>
 
 <main>
-    <h1 class="welcome-heading">Meine Kurse</h1>
+    <br><br><h1 class="welcome-heading">Meine Kurse</h1><br>
 
 
     <div class="profile-container">
