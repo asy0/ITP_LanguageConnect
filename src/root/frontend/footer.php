@@ -1,5 +1,9 @@
-<footer>
-    <div class="jumbotron jumbotron-fluid bg-secondary p-4 mt-5 mb-0">
+<footer class="footer"  style="
+              display: flex;
+              flex-direction: column;
+              min-height: 20vh;
+">
+    <div class="jumbotron jumbotron-fluid bg-secondary p-3 mt-4 mb-0">
         <div class="container">
             <div class="row">
                 <div class="col-12 col-sm-12 col-md-12 col-lg-4 col-xl-4 cizgi">
