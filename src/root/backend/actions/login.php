@@ -44,7 +44,6 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
                 header("Location: ../../backend/userlogged.php");
                 exit();
             } else {
-                $failedAttempt = true;
                 $message = "Anmeldung fehlgeschlagen. Bitte überprüfen Sie Benutzername und Passwort.";
             }
         }
@@ -52,15 +51,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         $message = "Benutzername nicht registriert. Bitte registrieren Sie sich zuerst.";
     }
 
-    // Statement, Db und alle Resulte aus der DB werden geschlossen
+    // Statement und Db werden geschlossen
     $stmt->close();
-    $result->close();
     $db->close();
 }
-
-// Fehlermeldung wird nur gesetzt, wenn die Anmeldung fehlschlägt
-if (!empty($message)) {
-    header("Location: ../../frontend/start.php");
-    exit();
-}
-
