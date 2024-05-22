@@ -17,7 +17,7 @@
     ?>
 </header>
 <main>
-    <br/><h1>FAQ</h1>
+    <br/><h1><b>FAQ</b></h1>
     <br /><div class="hilfecontainer">
         <div class="accordion" id="faqAccordion">
             <div class="accordion-item">
