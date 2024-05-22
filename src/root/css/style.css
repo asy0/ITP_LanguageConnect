@@ -72,18 +72,10 @@ ul li {
 .icon-box {
     background-color: #fff;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    border-radius: 10px;
+    border-radius: 8px; /* Angepasst auf den Wert der zweiten Deklaration */
     padding: 20px;
     margin-right: 20px;
-}
-
-
-.icon-box {
-    background-color: #fff;
-    border-radius: 8px;
-    padding: 20px;
-    margin-right: 20px;
-    transition: box-shadow 0.6s ease;
+    transition: box-shadow 0.6s ease; /* Hinzugefügt aus der zweiten Deklaration */
 }
 
 /* CSS-Regel für den Schatteneffekt beim Hover */
@@ -315,7 +307,7 @@ main {
 .profile-container {
      width: 100%;
      padding: 20px;
-     background: orange; /* Setzt die Hintergrundfarbe auf Orange */
+     background: #967e7e;
      box-shadow: 0 2px 10px rgba(0,0,0,0.1);
  }
 
