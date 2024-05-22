@@ -10,9 +10,6 @@
                 <li class="nav-item active pl-1">
                     <a class="nav-link" href="start.php"><i class="fa fa-home fa-fw mr-1"></i>Startseite</a>
                 </li>
-                <li class="nav-item  pl-1">
-                    <a class="nav-link" href="#">News</a>
-                </li>
                 <li class="nav-item pl-1">
                     <a class="nav-link" href="hilfeseite.php">FAQ</a>
                 </li>
@@ -23,25 +20,28 @@
                 session_start();
                 if (isset($_SESSION['logged_in']) && $_SESSION['isTutor'] = true): ?>
                     <li class="nav-item pl-1">
-                    <a class="nav-link" href="../../root/backend/actions/logout.php"><i class="fa fa-sign-out fa-fw mr-1"></i>Abmelden</a>
-                    </li>
-                    <li class="nav-item pl-1">
                     <a class="nav-link" href="../../root/frontend/Meine-Kurse.php"><i class="fa fa-sign-out fa-fw mr-1"></i>Meine Kurse</a>
                     </li>
                     <li class="nav-item pl-1">
                     <a class="nav-link" href="../../root/frontend/tutorprofil.php"><i class="fa fa-sign-out fa-fw mr-1"></i>Mein Tutorprofil</a>
                     </li>
-                    <?php endif ?>
+
+                    <li class="nav-item pl-1 ml-auto">
+                        <button class="btn btn-outline-light btn-sm"><a class="nav-link" href="../../root/backend/actions/logout.php" style="margin-right: 10px;" ><i class="fa fa-sign-out fa-fw mr-1"></i>Abmelden</a></button>
+                    </li>
+
+
+                <?php endif ?>
                 <?php
                 if (isset($_SESSION['logged_in']) && $_SESSION['isTutor'] != true ): ?>
-                    <li class="nav-item pl-1">
-                    <a class="nav-link" href="../../root/backend/actions/logout.php"><i class="fa fa-sign-out fa-fw mr-1"></i>Abmelden</a>
-                    </li>
                     <li class="nav-item pl-1">
                     <a class="nav-link" href="../../root/frontend/Meine-Kurse.php"><i class="fa fa-sign-out fa-fw mr-1"></i>Meine Kurse</a>
                     </li>
                     <li class="nav-item pl-1">
                     <a class="nav-link" href="../../root/frontend/myprofil.php"><i class="fa fa-sign-out fa-fw mr-1"></i>Mein Profil</a>
+                    </li>
+                    <li class="nav-item pl-1 ml-auto">
+                        <button class="btn btn-outline-light btn-sm"><a class="nav-link" href="../../root/backend/actions/logout.php" style="margin-right: 10px;" ><i class="fa fa-sign-out fa-fw mr-1"></i>Abmelden</a></button>
                     </li>
                     <?php endif ?>
                     <?php
