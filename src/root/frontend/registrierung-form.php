@@ -18,7 +18,7 @@
 <div class="logincontainer ">
     <div class="row justify-content-center"><br/><br/>
         <div class="col-md-5 gradient-custom-5">
-            <br/><h1 style="text-align: center;color: #fffbfb; ">Registrierung</h1><br><br>
+            <br/><h1 style="text-align: center;color: #fffbfb; "><b>Registrierung</b></h1><br><br>
 
             <?php include '../backend/error_message.php'; ?>
             <form action="../backend/actions/registrierung.php" method="post">
