@@ -19,7 +19,7 @@
 <div style="margin-left:130px;">
 <br>
 <br>
-    <br><h1><b> Herzlich Willkommen  <?php echo $_SESSION['username'] ?>!</b></h1>
+    <br><br><h1><b> Herzlich Willkommen  <?php echo $_SESSION['username'] ?>!</b></h1>
 
     <br><p> LanguageConnect wünscht dir einen schönen Tag... &#128516;&#128525;</p>
     <br><a href="booknow.php" role="button" type="button" class="btn btn-outline-info" >Jetzt -> ... &#128151; </a> </button>
@@ -27,7 +27,14 @@
 
 
 </div>
-<?php include '../frontend/footer.php'; ?>
+
+
+
+
+<div style="padding-top: 100px;"></div>
+   <br> <footer>
+        <?php include '../frontend/footer.php'; ?>
+    </footer>
 </body>
 </html>
 
