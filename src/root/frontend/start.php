@@ -111,13 +111,13 @@
                      Probestunde!
                  </p>
 
-
+              <?php if (!isset($_SESSION['logged_in'])): ?>
               <div class="text-center ">
                   <a href="./registrierung-form.php"  class="btn text-white rounded-pill shadow"  style="background-color: #06516c;
                     padding: 10px 20px; font-size: 20px; margin-top: 20px; margin-bottom: 20px;
                     ">Jetzt registrieren!</a>
               </div>
-
+                <?php endif ?>
           </div>
       </div>
     </div>
