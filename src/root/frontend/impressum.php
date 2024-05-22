@@ -22,7 +22,7 @@
             <div class="col-md-8">
                 <div class="card shadow">
                     <div class="card-body">
-                        <h1 class="header-imp"><b><u>IMPRESSUM</u></b></h1>
+                        <h1 class="header-imp"><b>IMPRESSUM</b></h1>
 
                         <br /><p>
                             Diese Website wird betrieben
