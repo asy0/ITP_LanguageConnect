@@ -39,33 +39,31 @@
             width: 70%;
             margin: 0 auto; /* Mittig zentrieren */
             border-collapse: collapse;
-            border: 2px solid #b0164c; /* Rahmen um die Tabelle */
+            border: 2px solid #b0164c;
 
         }
         .profile-table th, .profile-table td {
-            padding: 0.5rem 5rem; /* Kompakte Zellengröße */
+            padding: 0.5rem 5rem;
             vertical-align: middle;
             text-align: left;
-            border-bottom: 2px solid #b0164c; /* Linie zwischen den Zeilen */
+            border-bottom: 2px solid #b0164c;
         }
         .form-group {
-            margin-bottom: 1.5rem; /* Erhöhter Abstand zwischen den Formulargruppen */
+            margin-bottom: 1.5rem;
         }
-
-        /* Neue Klassen für die zentrierten Überschriften */
         .text-center {
             text-align: center;
             color: white;
         }
 
         .text-center label {
-            display: block; /* Stellt sicher, dass die Überschriften als Blockelemente behandelt werden */
-            margin-bottom: 0.5rem; /* Abstand unter den Überschriften */
+            display: block;
+            margin-bottom: 0.5rem;
         }
 
         /* Schmalere Input-Boxen */
         .form-group.w-50 {
-            width: 50%; /* Anpassung der Breite auf 45% */
+            width: 50%; /* Anpassung der Breite */
         }
 
         /* Zentriert die Formularcontainer */
