@@ -18,109 +18,92 @@ session_start();
 	<link rel="stylesheet" href="admin.css"> 
 
     <title>ADMIN</title>
-
-
 </head>
+
 <body>
+    <div class="sidebar">
+      <a class="adminindex" href="adminindex.php" >
+          <img class="img"
+           "style:"width: 100%; height: auto; background-size: cover; background-position:center;"
+           src="./img/adminlogo.png" alt="Admin Navlogo">
+      </a>
 
-<div class="sidebar">
-  <a class="adminindex" href="adminindex.php" >
-  <img class="img"
-       "style:"width: 100%; height: auto; background-size: cover; background-position:center;"
-       src="./img/logo.png" alt="Navlogo" >
+      <a class="active" href="#home" aria-disabled="true"  disabled> Allgemein</a>
+      <a href="adminindex.php">Meine Startseite</a>
+      <a href="../frontend/start.php">Startseite</a>
+      <a href="../frontend/hilfeseite.php">FAQ</a>
+      <a href="../frontend/impressum.php">Impressum</a>
 
-  </a>
-  <a class="active" href="#home" aria-disabled="true"  disabled> Allgemein</a>
-  <a href="adminindex.php">Startseite</a>
-  <a href="../news.php">News</a>
-  <a href="../faq.php">FAQ</a>
-  <a href="../impressum.php">Impressum</a>
-  <a href="#about"></a>
-
-  <a class="active" href="#home" disabled>Student</a>
-  <a href="#contact">Alle Studenten anzeigen</a>
-  <a href="#news"> Status ändern</a>
-  <a href="#about">Kategorie anzeigen</a>
+      <a class="active" href="#home" disabled>Alle Benutzer</a>
+      <a href="showallUsers.php">Alle Benutzer anzeigen</a>
 
 
-  <a class="active" href="#home" disabled>Tutoren</a>
-  <a href="#news">Status ändern</a>
-  <a href="#about"> Gebuchter Tutor bearbeiten</a>
-  <a href="">Alle Tutor anzeigen</a>
+      <a class="active" href="#home" disabled>Student</a>
+      <a href="showstudents.php">Studenten anzeigen</a>
+      <a href="editstudents.php">Studenten bearbeiten</a>
 
-  <a class="active" href="#home" disabled>User</a>
-  <a href="#news"> User deaktivieren</a>
-  <a href="editAllUser.php">User bearbeiten</a>
-  <a href="showallUser.php">Alle User anzeigen</a>
 
-  <a class="active" href="#home" disabled>News</a>
-  <a href="../news.php"> News erstellen</a>
-  <a href="../news.php">News löschen</a>
+      <a class="active" href="#home" disabled>Tutoren</a>
+      <a href="showtutors.php">Tutoren anzeigen</a>
+      <a href="edittutors.php">Tutoren bearbeiten</a>
 
-  <br>
-  <a href="../logout.php" role="button" type="button" class="btn btn-danger">Logout</button> </a>
-  
-</div>
+
+      <a class="active" href="#home" disabled>Kurse</a>
+      <a href="showcourse.php">Alle Kurse anzeigen</a>
+      <a href="editcourse.php">Kurse bearbeiten</a><br>
+
+      <a href="../backend/actions/logout.php" role="button" type="button" class="btn btn-danger">Logout</button> </a>
+
+    </div>
+
 
 <div class="content">
-
   <br><br><h1><b><u>HALLO ADMIN</u></b></h1><br><br>
   <p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. </p>
   <p>At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. </p>
-  <h2>Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.</h2>
-  
+  <p>Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.</p><br><br>
+
+ <div class="container">
+      <div class="row">
+         <div class="col-md-3"></div>
+          <div class="col-md-6 well">
+              <h4>Tutor</h4>
+              <hr>
+              <ul>
+                  <li><a href="showtutors.php">Alle Tutoren anzeigen</a></li>
+                  <li><a href="edittutors.php">Tutoren bearbeiten</a></li>
+              </ul>
+          </div>
+         <div class="col-md-3"></div>
+      </div><br>
 
 
+      <div class="row">
+         <div class="col-md-3"></div>
+          <div class="col-md-6 well">
+              <h4>Student </h4>
+              <hr>
+              <ul>
+                  <li><a href="showstudents.php">Alle Studenten anzeigen</a></li>
+                  <li><a href="editstudents.php">Studenten bearbeiten</a></li>
+              </ul>
+          </div>
+          <div class="col-md-3"></div>
+      </div><br>
 
-<br><br>
-<div class="container">
-  
-
-
-  <div class="row">
-     <div class="col-md-3"></div>
-      <div class="col-md-6 well">
-          <h4>Tutor</h4>
-          <hr>
-          <ul>
-              <li><a href="">Tutorien</a></li>
-              <li><a href="">Alle Buchungen</a></li>
-              <li><a href="">Reservierte Lehrer bearbeiten</a></li>
-          </ul>
-      </div>
-     <div class="col-md-3"></div>
+        <div class="row">
+            <div class="col-md-3"></div>
+            <div class="col-md-6 well">
+                <h4>Kurse </h4>
+                <hr>
+                <ul>
+                    <li><a href="showcourse.php">Alle Kurse anzeigen</a></li>
+                    <li><a href="editcourse.php">Kurse bearbeiten</a></li>
+                </ul>
+            </div>
+            <div class="col-md-3"></div>
+        </div><br>
   </div>
-  
-  
-  <div class="row">
-     <div class="col-md-3"></div>
-      <div class="col-md-6 well">
-          <h4>News </h4>
-          <hr>
-          <ul>
-              <li><a href="../news.php">News erstellen</a></li>
-              <li><a href="../news.php">News löschen</a></li>
-          </ul>
-      </div>
-      <div class="col-md-3"></div>
-  </div>
-
-
-  <div class="row">
-     <div class="col-md-3"></div>
-      <div class="col-md-6 well">
-          <h4>User </h4>
-          <hr>
-          <ul>
-              <li><a href="editStatusUser.php">User deaktivieren</a></li>
-              <li><a href="showallUser.php">User Übersicht</a></li>
-          </ul>
-      </div>
-      <div class="col-md-3"></div>
-  </div><br>
-
-</div>
-
 </div>
 
 
@@ -129,7 +112,6 @@ session_start();
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
 <!-- Include all compiled plugins (below), or include individual files as needed -->
 <script src="js/bootstrap.min.js"></script>
-
 
 
 </body>
