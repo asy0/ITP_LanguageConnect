@@ -1,10 +1,8 @@
 <?php
 session_start();
-
 ?>
-
 <!DOCTYPE html>
-<html lang="en">
+<html lang="de">
 
 <head>
     <meta charset="utf-8">
@@ -17,41 +15,45 @@ session_start();
     <link href="https://getbootstrap.com/docs/5.2/assets/css/docs.css" rel="stylesheet">
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js"></script>
     <link rel="stylesheet" href="admin.css">
-
     <title>ADMIN</title>
-
 
 </head>
 <body>
 
 <div class="sidebar">
     <a class="adminindex" href="adminindex.php" >
-        <img class="img" src="img/nav1.jpg"  alt="Navlogo">
+        <img class="img"
+        "style:"width: 100%; height: auto; background-size: cover; background-position:center;"
+        src="./img/adminlogo.png" alt="Admin Navlogo">
     </a>
-    <a class="active" href="#home" aria-disabled="true"  disabled> Allgemein</a>
-    <a href="adminindex.php">Startseite</a>
-    <a href="../frontend/news.php">News</a>
+
+    <a class="active" href="#home" aria-disabled="true"  disabled> Allgemein </a>
+    <a href="adminindex.php">Meine Startseite</a>
+    <a href="../frontend/start.php">Startseite</a>
     <a href="../frontend/hilfeseite.php">FAQ</a>
     <a href="../frontend/impressum.php">Impressum</a>
-    <a href="#about"></a>
 
-    <a class="active" href="#home" disabled>User</a>
-    <a href="editStatusUser.php">Userstatus ändern</a>
-    <a href="editAllUser.php">User bearbeiten</a>
-    <a href="showallUser.php">Alle User anzeigen</a>
+    <a class="active" href="#home" disabled>Alle Benutzer</a>
+    <a href="showallUsers.php">Alle Benutzer anzeigen</a>
 
-    <a class="active" href="#home" disabled>Buchungen</a>
-    <a href="">Alle Buchungen anzeigen</a>
 
-    <a class="active" href="#home" disabled>News</a>
-    <a href="../news.php"> News erstellen</a>
-    <a href="../news.php">News löschen</a>
+    <a class="active" href="#home" disabled> Student </a>
+    <a href="showstudents.php">Studenten anzeigen</a>
+    <a href="editstudents.php">Studenten bearbeiten</a>
 
-    <a class="active" href="#home" disabled>Tutoren</a>
-    <a href="#news"> Status ändern</a>
-    <a href="#about">Tutoren anzeigen</a>
-    <a href="#contact">Alle Tutoren anzeigen</a>
-    <br>
-    <a href="../logout.php" role="button" type="button" class="btn btn-danger">Logout</button> </a>
 
-</div>
+    <a class="active" href="#home" disabled> Tutoren </a>
+    <a href="showtutors.php">Tutoren anzeigen</a>
+    <a href="edittutors.php">Tutoren bearbeiten</a>
+
+
+    <a class="active" href="#home" disabled> Kurse </a>
+    <a href="showcourse.php">Alle Kurse anzeigen</a>
+    <a href="editcourse.php">Kurse bearbeiten</a><br>
+
+    <a href="../backend/actions/logout.php" role="button" type="button" class="btn btn-danger"> Logout  </a>
+
+  </div>
+
+</body>
+</html>
