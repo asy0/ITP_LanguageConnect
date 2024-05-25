@@ -8,13 +8,13 @@
         <div class="collapse navbar-collapse justify-content-end" id="nvbCollapse">
             <ul class="navbar-nav ml-auto">
                 <li class="nav-item active pl-1">
-                    <a class="nav-link" href="start.php"><i class="fa fa-home fa-fw mr-1"></i>Startseite</a>
+                    <a class="nav-link" href="../frontend/start.php"><i class="fa fa-home fa-fw mr-1"></i>Startseite</a>
                 </li>
                 <li class="nav-item pl-1">
-                    <a class="nav-link" href="hilfeseite.php">FAQ</a>
+                    <a class="nav-link" href="../frontend/hilfeseite.php">FAQ</a>
                 </li>
                 <li class="nav-item pl-1">
-                    <a class="nav-link" href="impressum.php">İmpressum</a>
+                    <a class="nav-link" href="../frontend/impressum.php">İmpressum</a>
                 </li>
                 <?php
                 session_start();
@@ -23,14 +23,14 @@
                         <a class="nav-link" href="../backend/userlogged.php"><i class="fa fa-sign-out fa-fw mr-1"></i>Meine Startseite</a>
                     </li>
                     <li class="nav-item pl-1">
-                    <a class="nav-link" href="meine-kurse.php"><i class="fa fa-sign-out fa-fw mr-1"></i>Meine Kurse</a>
+                    <a class="nav-link" href="../frontend/meine-kurse.php"><i class="fa fa-sign-out fa-fw mr-1"></i>Meine Kurse</a>
                     </li>
                     <li class="nav-item pl-1">
-                    <a class="nav-link" href="../../root/frontend/tutorprofil.php"><i class="fa fa-sign-out fa-fw mr-1"></i>Mein Tutorprofil</a>
+                    <a class="nav-link" href="../frontend/tutorprofil.php"><i class="fa fa-sign-out fa-fw mr-1"></i>Mein Tutorprofil</a>
                     </li>
 
                     <li class="nav-item pl-1 ml-auto">
-                        <button class="btn btn-outline-light btn-sm"><a class="nav-link" href="../../root/backend/actions/logout.php" style="margin-right: 10px;" ><i class="fa fa-sign-out fa-fw mr-1"></i>Abmelden</a></button>
+                        <button class="btn btn-outline-light btn-sm"><a class="nav-link" href="../backend/actions/logout.php" style="margin-right: 10px;" ><i class="fa fa-sign-out fa-fw mr-1"></i>Abmelden</a></button>
                     </li>
 
 
@@ -44,10 +44,10 @@
                     <a class="nav-link" href="meine-kurse.php"><i class="fa fa-sign-out fa-fw mr-1"></i>Meine Kurse</a>
                     </li>
                     <li class="nav-item pl-1">
-                    <a class="nav-link" href="../../root/frontend/myprofil.php"><i class="fa fa-sign-out fa-fw mr-1"></i>Mein Profil</a>
+                    <a class="nav-link" href="../frontend/myprofil.php"><i class="fa fa-sign-out fa-fw mr-1"></i>Mein Profil</a>
                     </li>
                     <li class="nav-item pl-1 ml-auto">
-                        <button class="btn btn-outline-light btn-sm"><a class="nav-link" href="../../root/backend/actions/logout.php" style="margin-right: 10px;" ><i class="fa fa-sign-out fa-fw mr-1"></i>Abmelden</a></button>
+                        <button class="btn btn-outline-light btn-sm"><a class="nav-link" href="../backend/actions/logout.php" style="margin-right: 10px;" ><i class="fa fa-sign-out fa-fw mr-1"></i>Abmelden</a></button>
                     </li>
                     <?php endif ?>
                     <?php
