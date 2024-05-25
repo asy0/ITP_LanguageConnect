@@ -7,7 +7,7 @@ function getDBConnection() {
     if($db != null) {
         return $db;
     }
-    $servername   =  "127.0.0.1";
+    $servername   =  "localhost";
     $dbusername   =  "root";
     $dbpassword   =   "" ;
     $dbname       =  "languageconnect";
