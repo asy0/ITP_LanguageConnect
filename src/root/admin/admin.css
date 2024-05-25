@@ -1,12 +1,17 @@
 .body {
     margin: 0;
     font-family: "Lato", sans-serif;
-  }
-  
-  .sidebar {
+    overflow-y: auto;
+}
+.container {
+  margin-left: 250px; /* Passt den linken Abstand an */
+  padding: 20px; /* Fügen Sie einen allgemeinen Innenabstand hinzu */
+}
+
+.sidebar {
     margin: 0;
     padding: 0;
-    width: 280px;
+    width: 300px;
     position: fixed;
     height: 100%;
     background-color: #111;
@@ -64,7 +69,7 @@
   }
    
   .sidebar a.active {
-    background-color: #035D6D;
+    background-color: #2f807b;
   }
   
   
@@ -95,3 +100,65 @@
       float: none;
     }
   }
+
+
+
+.sidebar a:hover:not([disabled]) {
+  background-color: #dc7019;
+  color: white;
+}
+
+.sidebar a[disabled] {
+  pointer-events: none;
+  cursor: default;
+  color: #ece9e6; /* Farbe für deaktivierte Links */
+  font-weight: bold;
+}
+
+
+
+/*table*/
+table {
+  width: 100%;
+  max-width: 300%;
+  border-collapse: collapse;
+  margin-top: 20px;
+  overflow-x: auto;
+}
+table, th, td {
+  border: 1px solid #110c07;
+}
+th, td {
+  padding: 12px;
+  text-align: left;
+}
+th {
+  background-color: #940832;
+  color: white;
+}
+tr:nth-child(even) {
+  background-color: rgb(185, 179, 179);
+}
+h1 {
+  text-align: center;
+}
+@media (max-width: 600px) {
+  .content {
+    margin-left: 0;
+    padding: 10px;
+  }
+  h1 {
+    font-size: 1.5em;
+  }
+  table, th, td {
+    font-size: 0.9em;
+    padding: 8px;
+  }
+  th, td {
+    white-space: nowrap;
+  }
+  table {
+    display: block;
+    overflow-x: auto;
+  }
+}
