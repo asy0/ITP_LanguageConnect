@@ -11,7 +11,7 @@ Unsere Website ermöglicht es Schülern, Tutorien anzubieten und zu buchen, um i
 Funktionen:
 - Benutzerregistrierung und -verwaltung
 - Kursbuchung und -verwaltung
-- Sprachfilterung für Kurse
+
 
 Technologie:
 Frontend: HTML, PHP, CSS, Bootstrap
