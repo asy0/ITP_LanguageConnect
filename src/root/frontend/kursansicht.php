@@ -25,7 +25,7 @@
     <div class="buttonbox">
         <a href="meine-kurse.php" class="button">Meine Kurse</a>
         <?php if(isset($_SESSION['isTutor']) && $_SESSION['isTutor']): ?>
-            <br><a href="../frontend/kurserstellen.php" role="button" type="button" class="btn btn-outline-info" >Kurs erstellen &#128221; </a> </button>
+            <br><a href="../frontend/kurserstellen.php" role="button" type="button" class="button" >Kurs erstellen &#128221; </a> </button>
         <?php endif ?>
 
 
