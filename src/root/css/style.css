@@ -462,3 +462,71 @@ input[type=number] {
     padding: 20px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
+
+
+
+/*MYPROFILE*/
+.profile-header {
+    font-size: 1.5rem;
+    font-weight: bold;
+    margin-bottom: 1rem;
+}
+.profile-info p {
+    margin-bottom: 0.5rem;
+}
+.half-input-container {
+    display: flex;
+    gap: 1rem;
+}
+.form-group {
+    margin-bottom: 1rem;
+}
+.save-button {
+    background-color: #b0164c;
+    color: white;
+    border: none;
+    padding: 0.5rem 1rem;
+    cursor: pointer;
+}
+.save-button:hover {
+    background-color: #2f807b;
+}
+
+.profile-table {
+    width: 70%;
+    margin: 0 auto;
+    border-collapse: collapse;
+    border: 2px solid #b0164c;
+
+}
+.profile-table th, .profile-table td {
+    padding: 0.5rem 5rem;
+    vertical-align: middle;
+    text-align: left;
+    border-bottom: 2px solid #b0164c;
+}
+.form-group {
+    margin-bottom: 1.5rem;
+}
+
+.text-center {
+    text-align: center;
+    color: white;
+}
+
+.text-center label {
+    display: block;
+    margin-bottom: 0.5rem;
+}
+
+/* Schmalere Input-Boxen */
+.form-group.w-50 {
+    width: 50%;
+}
+
+/* Zentriert die Formularcontainer */
+.profile-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
