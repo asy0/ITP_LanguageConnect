@@ -15,8 +15,8 @@ Funktionen:
 
 Technologie:
 Frontend: HTML, PHP, CSS, Bootstrap
-Backend: Datenbank mit SQL, JavaScript  
-Entwicklungstools: GitHub
+Backend: Datenbank mit SQL, PHP für die Verbindung zur Datenbank und die Verarbeitung von Anfragen 
+Entwicklungstools: GitHub für Versionskontrolle, Visual Studio Code/Webstorm für die Entwicklung, XAMPP für die lokale Entwicklungsumgebung
 
 Team:
 - Mahmood S.
