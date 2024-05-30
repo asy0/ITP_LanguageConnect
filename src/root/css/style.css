@@ -423,3 +423,42 @@ main {
 .button:hover {
     background-color: rgb(128, 128, 128);}
 
+
+
+
+/*Kurserstellen*/
+.image-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+}
+.image-container img {
+    max-height: 100%;
+    object-fit: cover;
+    width: 100%;
+    border-radius: 8px;
+}
+.form-label {
+    font-weight: bold;
+}
+/* Entfernt die Pfeile bei den Input-Feldern für "number" in Webkit-Browsern */
+input[type=number]::-webkit-outer-spin-button,
+input[type=number]::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+/* Entfernt die Pfeile bei den Input-Feldern für "number" in Firefox */
+input[type=number] {
+    -moz-appearance: textfield;
+}
+.card-custom {
+    height: 100%;
+}
+
+.container-custom {
+    background-color: #ffffff;
+    border-radius: 8px;
+    padding: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
