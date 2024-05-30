@@ -12,7 +12,6 @@ Funktionen:
 - Benutzerregistrierung und -verwaltung
 - Kursbuchung und -verwaltung
 
-
 Technologie:
 Frontend: HTML, PHP, CSS, Bootstrap
 Backend: Datenbank mit SQL, JavaScript  
