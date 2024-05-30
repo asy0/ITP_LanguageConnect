@@ -17,28 +17,27 @@
 <body>
 
 <div style="margin-left:130px;">
-<br>
-<br>
+    <br>
+    <br>
     <br><br><h1><b> Herzlich Willkommen  <?php echo $_SESSION['username'] ?>!</b></h1>
     <br><p> LanguageConnect wünscht dir einen schönen Tag... &#128516;&#128525;</p>
-    <br><a href="../frontend/kursansicht.php" role="button" type="button" class="btn btn-outline-info" >Meine Kurse &#128151; </a> </button>
+    <br><a href="../frontend/meine-kurse.php" role="button" type="button" class="btn btn-outline-info" >Meine Kurse &#128151; </a> </button>
+    <br><a href="../frontend/kursansicht.php" role="button" type="button" class="btn btn-outline-info" >Kursansicht &#128221; </a> </button>
     <br><a href="../frontend/myprofil.php" role="button" type="button" class="btn btn-outline-info" >Mein Profil &#128100; </a> </button>
     <br><a href="../frontend/kursliste.php" role="button" type="button" class="btn btn-outline-info" >Kursliste &#128218; </a> </button>
-    <br><a href="../frontend/kurserstellen.php" role="button" type="button" class="btn btn-outline-info" >Kurs erstellen &#128221; </a> </button>
-   <br><br>
-    <br><a href="../frontend/logout.php" role="button" type="button" class="btn btn-outline-info" >Logout &#128682; </a> </button>
+
+    <?php if(isset($_SESSION['isTutor']) && $_SESSION['isTutor']): ?>
+        <br><a href="../frontend/kurserstellen.php" role="button" type="button" class="btn btn-outline-info" >Kurs erstellen &#128221; </a> </button>
+    <?php endif ?>
+
+    <br><br>
+    <br><a href="../backend/actions/logout.php" role="button" type="button" class="btn btn-outline-info" >Abmelden &#128682; </a> </button>
     <br><br>
 </div>
 
-
-
-
 <div style="padding-top: 100px;"></div>
-   <br> <footer>
-        <?php include '../frontend/footer.php'; ?>
-    </footer>
+<br> <footer>
+    <?php include '../frontend/footer.php'; ?>
+</footer>
 </body>
 </html>
-
-
-
