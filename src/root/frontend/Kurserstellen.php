@@ -10,7 +10,6 @@
     <title>Profil</title>
 </head>
 
-
 <body>
 <header>
     <!--- Navbar --->
@@ -18,44 +17,39 @@
 </header>
 
 <main>
-    <h1 class="welcome-heading">Erstell dein Kurs</h1>
-<div class="buttonbox">
-    <form action="/submit-course" method="post">
-        <label for="course-name">Kursname:</label>
-        <input type="text" id="course-name" name="course_name" required><br><br>
+    <h1 class="welcome-heading">Erstelle deinen Kurs</h1>
+    <div class="buttonbox">
+        <form action="../../root/backend/actions/kurs_speichern.php" method="post">
+            <label for="course-name">Kursname:</label>
+            <input type="text" id="course-name" name="course_name" required><br><br>
 
-        <label for="subject">Fach/Sprache:</label>
-        <input type="text" id="subject" name="subject" required><br><br>
+            <label for="subject">Fach/Sprache:</label>
+            <input type="text" id="subject" name="subject" required><br><br>
 
-        <label for="description">Beschreibung:</label>
-        <textarea id="description" name="description" required></textarea><br><br>
+            <label for="description">Beschreibung:</label>
+            <textarea id="description" name="description" required></textarea><br><br>
 
-        <label for="target-group">Zielgruppe:</label>
-        <select id="target-group" name="target_group">
-            <option value="beginner">Anfänger</option>
-            <option value="intermediate">Fortgeschritten</option>
-            <option value="advanced">Experten</option>
-        </select><br><br>
+            <label for="target-group">Zielgruppe:</label>
+            <select id="target_group" name="target_group" required>
+                <option value="Anfaenger">Anfänger</option>
+                <option value="Fortgeschritten">Fortgeschritten</option>
+                <option value="Experte">Experten</option>
+            </select><br><br>
 
-        <label for="prerequisites">Vorkenntnisse:</label>
-        <input type="text" id="prerequisites" name="prerequisites" required><br><br>
+            <label for="format">Kursformat:</label>
+            <select id="format" name="format" required>
+                <option value="Online">Online</option>
+                <option value="Praesenz">Präsenz</option>
+            </select><br><br>
 
-        <label for="payment-per-hour">Bezahlung pro Stunde (€):</label>
-        <input type="number" id="payment-per-hour" name="payment_per_hour" min="0" step="0.01" required><br><br>
+            <label for="duration">Kursdauer (Anfang)</label>
+            <input type="date" id="termin_anfang" name="termin_anfang" placeholder="Beginndatum" required><br>
+            <label for="duration">Kursdauer (Ende)</label>
+            <input type="date" id="termin_ende" name="termin_ende" placeholder="Enddatum" required><br>
 
-        <label for="format">Kursformat:</label>
-        <select id="format" name="format">
-            <option value="online">Online</option>
-            <option value="in-person">Präsenz</option>
-
-        </select><br><br>
-
-        <label for="duration">Kursdauer (Anzahl der Stunden):</label>
-        <input type="number" id="duration" name="duration" min="1" required><br><br>
-
-        <button type="submit">Erstellen</button>
-</div>
-    </form>
+            <button type="submit">Erstellen</button>
+        </form>
+    </div>
 </main>
 
 <footer>
@@ -65,5 +59,3 @@
 
 </body>
 </html>
-
-
