@@ -27,7 +27,7 @@
         include '../../root/backend/db_connect.php';
         $db = getDBConnection();
         $currentuser = $_SESSION['username'];
-        $query = "SELECT Kursname, Sprache, Beschreibung, Kursformat, Kursdauer_Anfang, Kursdauer_Ende FROM kurse WHERE Gebucht_von = '$currentuser'";
+        $query = "SELECT Kursname, Anbieter, Anbieter_Email, Sprache, Beschreibung, Kursformat, Kursdauer_Anfang, Kursdauer_Ende, Preis FROM kurse WHERE Gebucht_von = '$currentuser'";
 
         // Ausführen der Abfrage
         $result = mysqli_query($db, $query);
@@ -39,11 +39,14 @@
                 // Daten in die entsprechenden HTML-Elemente einfügen
                 echo '<div class="profile-info">';
                 echo '<p>Kursname: ' . $row["Kursname"] . '</p>';
+                echo '<p>Anbieter: ' . $row["Anbieter"] . '</p>';
+                echo '<p>E-Mail: ' . $row["Anbieter_Email"] . '</p>';
                 echo '<p>Sprache: ' . $row["Sprache"] . '</p>';
                 echo '<p>Beschreibung: ' . $row["Beschreibung"] . '</p>';
                 echo '<p>Kursformat: ' . $row["Kursformat"] . '</p>';
                 echo '<p>von: ' . $row["Kursdauer_Anfang"] . '</p>';
                 echo '<p>bis: ' . $row["Kursdauer_Ende"] . '</p>';
+                echo '<p>Preis: ' . $row["Preis"] . ' Euro</p>';
                 echo '</div>';
                 echo '<br>';
             }

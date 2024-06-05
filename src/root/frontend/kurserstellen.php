@@ -27,10 +27,10 @@
             <div class="col-md-6 order-2 order-md-1">
                 <div class="card card-custom container-custom">
                     <div class="card-body">
-                        <form action="/submit-course" method="post">
+                        <form action="../../root/backend/actions/kurs_speichern.php" method="post">
                             <div class="mb-3">
                                 <label for="course-name" class="form-label">Kursname</label>
-                                <input type="text" class="form-control" id="course-name" name="course_name" required>
+                                <input type="text" class="form-control" id="course_name" name="course_name" required>
                             </div>
                             <div class="mb-3">
                                 <label for="subject" class="form-label">Fach/Sprache</label>
@@ -42,32 +42,27 @@
                             </div>
                             <div class="mb-3">
                                 <label for="target-group" class="form-label">Zielgruppe</label>
-                                <select class="form-select" id="target-group" name="target_group">
-                                    <option value="beginner">Anfänger</option>
-                                    <option value="intermediate">Fortgeschritten</option>
-                                    <option value="advanced">Experten</option>
+                                <select class="form-select" id="target_group" name="target_group">
+                                    <option value="Anfaenger">Anfänger</option>
+                                    <option value="Fortgeschritten">Fortgeschritten</option>
+                                    <option value="Experte">Experten</option>
                                 </select>
                             </div>
                             <div class="mb-3">
-                                <label for="prerequisites" class="form-label">Vorkenntnisse</label>
-                                <input type="text" class="form-control" id="prerequisites" name="prerequisites" required>
-                            </div>
-
-                            <div class="mb-3">
-                                <label for="payment-per-hour" class="form-label">Bezahlung pro Stunde(€)</label>
-                                <input type="number" class="form-control" id="payment-per-hour" name="payment_per_hour" min="0" step="0.01" required>
+                                <label for="price" class="form-label">Preis pro Stunde</label>
+                                <input type="text" class="form-control" id="price" name="price" required>
                             </div>
                             <div class="mb-3">
                                 <label for="format" class="form-label">Kursformat</label>
                                 <select class="form-select" id="format" name="format">
                                     <option value="online">Online</option>
-                                    <option value="in-person">Präsenz</option>
+                                    <option value="praesenz">Präsenz</option>
                                 </select>
                             </div>
-                            <div class="mb-3">
-                                <label for="duration" class="form-label">Kursdauer (Anzahl der Stunden)</label>
-                                <input type="number" class="form-control" id="duration" name="duration" min="1" required>
-                            </div>
+                            <label for="duration">Kursdauer (Anfang)</label>
+                            <input type="date" id="termin_anfang" name="termin_anfang" placeholder="Beginndatum" required><br>
+                            <label for="duration">Kursdauer (Ende)</label>
+                            <input type="date" id="termin_ende" name="termin_ende" placeholder="Enddatum" required><br>
                             <button class="btn btn-warning btn-rounded" type="submit">Erstellen</button>
                         </form>
                     </div>

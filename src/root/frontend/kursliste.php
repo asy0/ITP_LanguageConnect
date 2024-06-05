@@ -58,42 +58,48 @@
 
 <main>
     <br><br><h1 class="welcome-heading">Kursliste</h1><br>
-    <div class="buttonbox">
-        <div class="profile-pic">
-            <!-- Hier könnte Ihr Bild eingefügt werden -->
-            <img src="https://www.oefb.at/oefb2/images/1278650591628556536_6e8a657959df7155a926-1,0-320x320.png" alt="Beschreibung des Bildes">
-        </div>
-        <div class="info">
-            <div><strong>Name:</strong> Max Mustermann</div>
-            <div><strong>Fach:</strong> Informatik</div>
-            <div><strong>Bezahlung:</strong> 20€/h</div>
-            <div><strong>Email:</strong> max@example.com</div>
-        </div>
-    </div>
-    <div class="buttonbox">
-        <div class="profile-pic">
-            <!-- Hier könnte Ihr Bild eingefügt werden -->
-            <img src="https://www.oefb.at/oefb2/images/1278650591628556536_6e8a657959df7155a926-1,0-320x320.png" alt="Beschreibung des Bildes">
-        </div>
-        <div class="info">
-            <div><strong>Name:</strong> Max Mustermann</div>
-            <div><strong>Fach:</strong> Informatik</div>
-            <div><strong>Bezahlung:</strong> 20€/h</div>
-            <div><strong>Email:</strong> max@example.com</div>
-        </div>
-    </div>
-    <div class="buttonbox">
-        <div class="profile-pic">
-            <!-- Hier könnte Ihr Bild eingefügt werden -->
-            <img src="https://www.oefb.at/oefb2/images/1278650591628556536_6e8a657959df7155a926-1,0-320x320.png" alt="Beschreibung des Bildes">
-        </div>
-        <div class="info">
-            <div><strong>Name:</strong> Max Mustermann</div>
-            <div><strong>Fach:</strong> Informatik</div>
-            <div><strong>Bezahlung:</strong> 20€/h</div>
-            <div><strong>Email:</strong> max@example.com</div>
-        </div>
-    </div>
+    
+    <?php
+    include_once "../backend/db_connect.php";
+
+    // Funktion zur Verbindung mit der Datenbank
+    $db = getDBConnection();
+
+    // SQL-Abfrage, um die Kursdaten abzurufen
+    $sql = "SELECT Kursname, Anbieter, Anbieter_Email, Sprache, Beschreibung, Kursformat, Zielgruppe, Kursdauer_Anfang, Kursdauer_Ende, Preis, Gebucht 
+            FROM kurse 
+            WHERE Gebucht = 0"; // Filterung nach nicht gebuchten Kursen
+
+    $result = $db->query($sql);
+
+    if ($result->num_rows > 0) {
+        // Ausgabe der Kursdaten
+        while ($row = $result->fetch_assoc()) {
+            ?>
+            <div class="buttonbox">
+                <div class="info">
+                    <div><strong>Anbieter:</strong> <?php echo $row['Anbieter']; ?></div>
+                    <div><strong>Kontaktdaten:</strong> <?php echo $row['Anbieter_Email']; ?></div>
+                    <div><strong>Sprache:</strong> <?php echo $row['Sprache']; ?></div>
+                    <div><strong>Beschreibung:</strong> <?php echo $row['Beschreibung']; ?></div>
+                    <div><strong>Format:</strong> <?php echo $row['Kursformat']; ?></div>
+                    <div><strong>Bezahlung:</strong> <?php echo $row['Preis']; ?> €/h</div>
+                    <div><strong>Zielgruppe:</strong> <?php echo $row['Zielgruppe']; ?></div>
+                    <div><strong>Anfang:</strong> <?php echo $row['Kursdauer_Anfang']; ?></div>
+                    <div><strong>Ende:</strong> <?php echo $row['Kursdauer_Ende']; ?></div>
+                    <!-- Button zum Buchen des Kurses -->
+                    <button class="btn btn-primary btn-buchen" data-kursname="<?php echo $row['Kursname']; ?>">Kurs buchen</button>
+                </div>
+            </div>
+            <?php
+        }
+    } else {
+        echo "Keine Kurse gefunden.";
+    }
+
+    // Verbindung schließen
+    $db->close();
+    ?>
 </main>
 
 <footer>
@@ -101,5 +107,29 @@
     <?php include './footer.php'; ?>
 </footer>
 
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<script>
+    // AJAX-Anfrage, um den Kurs zu buchen
+    $(document).ready(function() {
+        $('.btn-buchen').click(function() {
+            var kursname = $(this).data('kursname');
+            var username = "<?php echo $_SESSION['username']; ?>";
+
+            $.ajax({
+                type: 'POST',
+                url: '../backend/actions/kurs_buchen.php',
+                data: { kursname: kursname, username: username },
+                success: function(response) {
+                    if (response == 'success') {
+                        alert('Kurs erfolgreich gebucht!');
+                        location.reload(); // Seite neu laden, um die aktualisierte Liste zu zeigen
+                    } else {
+                        alert('Fehler beim Buchen des Kurses.');
+                    }
+                }
+            });
+        });
+    });
+</script>
 </body>
 </html>
