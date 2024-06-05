@@ -49,6 +49,10 @@
                                 </select>
                             </div>
                             <div class="mb-3">
+                                <label for="price" class="form-label">Preis pro Stunde</label>
+                                <input type="text" class="form-control" id="price" name="price" required>
+                            </div>
+                            <div class="mb-3">
                                 <label for="format" class="form-label">Kursformat</label>
                                 <select class="form-select" id="format" name="format">
                                     <option value="online">Online</option>
