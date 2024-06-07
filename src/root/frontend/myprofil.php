@@ -66,7 +66,7 @@
         </form>
 
         <div class="form-group text-center mt-4">
-            <button onclick="window.location.href = 'kurserstellen.php';" class="btn btn-info">Zu meinen Kursen</button>
+            <button onclick="window.location.href = 'meine-kurse.php';" class="btn btn-info">Zu meinen Kursen</button>
         </div>
     </div>
 </div>
