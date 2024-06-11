@@ -39,7 +39,7 @@ if ($password!== $passwordconfirm) {
         $hashedpassword = password_hash($password, PASSWORD_DEFAULT);
         $status = 1; // 1 = aktiv, 0 = inaktiv
         $stmt = $db->prepare("INSERT INTO users (anrede, firstname, lastname, email, username, password, role, status) VALUES (?,?,?,?,?,?,?,?)");
-        $stmt->bind_param("ssssssss", $anrede, $vorname, $nachname, $email, $username, $hashedpassword, $role,$status);
+        $stmt->bind_param("ssssssss", $anrede, $vorname, $nachname, $email, $username, $hashedpassword, $role, $status);
 
         if ($stmt->execute()) {
             $stmt->close();
