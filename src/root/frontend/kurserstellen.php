@@ -59,10 +59,10 @@
                                     <option value="praesenz">Präsenz</option>
                                 </select>
                             </div>
-                            <label for="duration">Kursdauer (Anfang)</label>
-                            <input type="date" id="termin_anfang" name="termin_anfang" placeholder="Beginndatum" required><br>
-                            <label for="duration">Kursdauer (Ende)</label>
-                            <input type="date" id="termin_ende" name="termin_ende" placeholder="Enddatum" required><br>
+                            <label for="duration" class="form-label">Kursdauer (Anfang) </label><br>
+                            <input type="date" id="termin_anfang" name="termin_anfang" placeholder="Beginndatum" required><br><br>
+                            <label for="duration" class="form-label">Kursdauer (Ende) </label><br>
+                            <input type="date" id="termin_ende" name="termin_ende" placeholder="Enddatum" required><br> <br><br>
                             <button class="btn btn-warning btn-rounded" type="submit">Erstellen</button>
                         </form>
                     </div>
