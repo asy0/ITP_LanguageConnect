@@ -41,8 +41,13 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         }
     } else {
         $message = "Benutzername nicht registriert. Bitte registrieren Sie sich zuerst.";
+
     }
 
     $stmt->close();
     $db->close();
+
+    $_SESSION['error_message'] = $message;
+    header("Location: ../../frontend/login-form.php");
+    exit();
 }
