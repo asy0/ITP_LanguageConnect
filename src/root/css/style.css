@@ -92,11 +92,13 @@ ul li {
     text-align: center;
 }
 
-
+/*
 .max-width-img {
     max-width: 100%;
     height: auto;
 }
+
+ */
 
 
 /* CSS für die Animation */
@@ -265,6 +267,7 @@ ul li {
     margin: auto;
 }
 
+/*
 .impressum-container{
     color: #110c07;
     margin-top: 30px;
@@ -272,7 +275,7 @@ ul li {
     margin-bottom: 30px;
     text-align: center;
 }
-
+*/
 
 .center {
     text-align: center;
@@ -336,6 +339,7 @@ main {
     padding: 20px;
 }
 
+/*
 .profilecontainer {
     background: #fff;
     border-radius: 8px;
@@ -343,7 +347,7 @@ main {
     padding: 20px;
     max-width: 700px;
     margin: auto;
-}
+}*/
 
 .profile-header {
     font-size: 24px;
@@ -356,11 +360,14 @@ main {
     margin-bottom: 15px;
 }
 
+/*
 .label {
     font-weight: bold;
     display: block;
     margin-bottom: 5px;
 }
+
+ */
 
 .input, .select {
     width: 100%;
