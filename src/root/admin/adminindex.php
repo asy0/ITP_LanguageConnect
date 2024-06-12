@@ -27,7 +27,7 @@ if (!isset($_SESSION['logged_in']) || $_SESSION['logged_in'] !== true && $_SESSI
 <body>
     <div class="sidebar">
       <a class="adminindex" href="adminindex.php" >
-          <img class="img"
+          <img class="img" alt="Adminindex"
            "style:"width: 100%; height: auto; background-size: cover; background-position:center;"
            src="./img/adminlogo.png" alt="Admin Navlogo">
       </a>
@@ -56,7 +56,7 @@ if (!isset($_SESSION['logged_in']) || $_SESSION['logged_in'] !== true && $_SESSI
       <a href="showcourse.php">Alle Kurse anzeigen</a>
       <a href="editcourse.php">Kurse bearbeiten</a><br>
 
-      <a href="../backend/actions/logout.php" role="button" type="button" class="btn btn-danger">Logout</button> </a>
+      <a href="../backend/actions/logout.php" role="button" type="button" class="btn btn-danger">Logout</a>
 
     </div>
 
