@@ -10,6 +10,7 @@
     <style>
         .buttonbox {
             display: flex;
+            flex-direction: column;
             align-items: center;
             margin-bottom: 20px;
             padding: 20px;
@@ -17,35 +18,49 @@
             border-radius: 8px;
             box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
         }
-        .profile-pic {
-            margin-right: 20px;
+
+        .table td, .table th {
+            padding: 0.2rem;
         }
-        .profile-pic img {
-            width: 250px;
-            height: 250px;
-            object-fit: cover;
-            border-radius: 50%;
+
+        .table {
+            width: auto;
+            margin: 0 auto;
         }
-        .info {
-            display: flex;
-            flex-direction: column;
+
+        .label {
+            font-weight: bold;
+            margin-bottom: 25px;
+            text-align: left;
         }
-        .info div {
-            margin-bottom: 10px;
+
+        .data {
+            text-align: left;
         }
+
         body {
             background-color: #f0f2f5;
         }
+
         main {
-            padding: 20px;
+            padding: 30px;
         }
+
         .welcome-heading {
             text-align: center;
             text-decoration: underline;
             font-size: 3.5rem;
             font-weight: bold;
-
         }
+
+        .btn-buchen {
+            margin-top: 20px;
+        }
+        /*
+        .buttonbox:nth-child(even) {
+            background-color: rgba(76, 79, 84, 0.91); /* Hier kann ich die gewünschte Hintergrundfarbe für 2.Kind setzen  */
+        /*}*/
+
     </style>
     <title>Profil</title>
 </head>
@@ -58,7 +73,7 @@
 
 <main>
     <br><br><h1 class="welcome-heading">Kursliste</h1><br>
-    
+
     <?php
     include_once "../backend/db_connect.php";
 
@@ -77,20 +92,50 @@
         while ($row = $result->fetch_assoc()) {
             ?>
             <div class="buttonbox">
-                <div class="info">
-                    <div><strong>Anbieter:</strong> <?php echo $row['Anbieter']; ?></div>
-                    <div><strong>Kontaktdaten:</strong> <?php echo $row['Anbieter_Email']; ?></div>
-                    <div><strong>Sprache:</strong> <?php echo $row['Sprache']; ?></div>
-                    <div><strong>Beschreibung:</strong> <?php echo $row['Beschreibung']; ?></div>
-                    <div><strong>Format:</strong> <?php echo $row['Kursformat']; ?></div>
-                    <div><strong>Bezahlung:</strong> <?php echo $row['Preis']; ?> €/h</div>
-                    <div><strong>Zielgruppe:</strong> <?php echo $row['Zielgruppe']; ?></div>
-                    <div><strong>Anfang:</strong> <?php echo $row['Kursdauer_Anfang']; ?></div>
-                    <div><strong>Ende:</strong> <?php echo $row['Kursdauer_Ende']; ?></div>
-                    <!-- Button zum Buchen des Kurses -->
-                    <button class="btn btn-primary btn-buchen" data-kursname="<?php echo $row['Kursname']; ?>">Kurs buchen</button>
-                </div>
+                <table class="table table-borderless">
+                    <tbody class="table-body">
+                    <tr>
+                        <td class="label">Anbieter &nbsp;&nbsp;</td>
+                        <td class="data"><?php echo $row['Anbieter']; ?></td>
+                    </tr>
+                    <tr>
+                        <td class="label">Kontaktdaten &nbsp;&nbsp;</td>
+                        <td class="data"><?php echo $row['Anbieter_Email']; ?></td>
+                    </tr>
+                    <tr>
+                        <td class="label">Sprache &nbsp;&nbsp;</td>
+                        <td class="data"><?php echo $row['Sprache']; ?></td>
+                    </tr>
+                    <tr>
+                        <td class="label">Beschreibung &nbsp;&nbsp;</td>
+                        <td class="data"><?php echo $row['Beschreibung']; ?></td>
+                    </tr>
+                    <tr>
+                        <td class="label">Format &nbsp;&nbsp;</td>
+                        <td class="data"><?php echo $row['Kursformat']; ?></td>
+                    </tr>
+                    <tr>
+                        <td class="label">Bezahlung &nbsp;&nbsp;</td>
+                        <td class="data"><?php echo $row['Preis']; ?> €/h</td>
+                    </tr>
+                    <tr>
+                        <td class="label">Zielgruppe &nbsp;&nbsp;</td>
+                        <td class="data"><?php echo $row['Zielgruppe']; ?></td>
+                    </tr>
+                    <tr>
+                        <td class="label">Anfang &nbsp;&nbsp;</td>
+                        <td class="data"><?php echo $row['Kursdauer_Anfang']; ?></td>
+                    </tr>
+                    <tr>
+                        <td class="label">Ende &nbsp;&nbsp;</td>
+                        <td class="data"><?php echo $row['Kursdauer_Ende']; ?></td>
+                    </tr>
+                    </tbody>
+                </table>
+                <!-- Button zum Buchen des Kurses -->
+                <button class="btn btn-outline-success btn-buchen" data-kursname="<?php echo $row['Kursname']; ?>">Kurs buchen</button>
             </div>
+
             <?php
         }
     } else {
