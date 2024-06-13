@@ -36,10 +36,10 @@ Installation:
        - Kopieren Sie den gesamten Inhalt des Projektordners `root` in das `htdocs`-Verzeichnis von XAMPP. Der Standardpfad ist `C:\xampp\htdocs`.
 
 Datenbankeinrichtung:
-    1. Datenbank erstellen:
-       - Öffnen Sie PHPMyAdmin über `http://localhost/phpmyadmin`.
-       - Erstellen Sie eine neue Datenbank, z.B. `languageconnect`.
-       - Importieren Sie die SQL-Datei, die die Datenbankstruktur enthält.
+ - Datenbank erstellen:
+   - Öffnen Sie PHPMyAdmin über `http://localhost/phpmyadmin`.
+   - Erstellen Sie eine neue Datenbank, z.B. `languageconnect`.
+   - Importieren Sie die SQL-Datei, die die Datenbankstruktur enthält.
 
 Konfiguration:
 
