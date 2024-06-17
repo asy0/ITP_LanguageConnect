@@ -56,11 +56,6 @@
         .btn-buchen {
             margin-top: 20px;
         }
-        /*
-        .buttonbox:nth-child(even) {
-            background-color: rgba(76, 79, 84, 0.91); /* Hier kann ich die gewünschte Hintergrundfarbe für 2.Kind setzen  */
-        /*}*/
-
     </style>
     <title>Profil</title>
 </head>
@@ -80,10 +75,23 @@
     // Funktion zur Verbindung mit der Datenbank
     $db = getDBConnection();
 
-    // SQL-Abfrage, um die Kursdaten abzurufen
-    $sql = "SELECT Kursname, Anbieter, Anbieter_Email, Sprache, Beschreibung, Kursformat, Zielgruppe, Kursdauer_Anfang, Kursdauer_Ende, Preis, Gebucht 
-            FROM kurse 
-            WHERE Gebucht = 0"; // Filterung nach nicht gebuchten Kursen
+    // Benutzername aus der Session holen
+    $currentuser = $_SESSION['username'];
+
+    // Überprüfen, ob der Benutzer ein Tutor ist
+    $isTutor = isset($_SESSION['isTutor']) && $_SESSION['isTutor'];
+
+    if ($isTutor) {
+        // SQL-Abfrage, um die vom Tutor erstellten Kursdaten abzurufen
+        $sql = "SELECT Kursname, Anbieter, Anbieter_Email, Sprache, Beschreibung, Kursformat, Zielgruppe, Kursdauer_Anfang, Kursdauer_Ende, Preis
+                FROM kurse 
+                WHERE Anbieter = '$currentuser'";
+    } else {
+        // SQL-Abfrage, um die Kurse abzurufen, die der Student noch nicht gebucht hat
+        $sql = "SELECT Kursname, Anbieter, Anbieter_Email, Sprache, Beschreibung, Kursformat, Zielgruppe, Kursdauer_Anfang, Kursdauer_Ende, Preis
+                FROM kurse 
+                WHERE KursID NOT IN (SELECT KursID FROM kurse WHERE Gebucht_von = '$currentuser')";
+    }
 
     $result = $db->query($sql);
 
@@ -132,10 +140,11 @@
                     </tr>
                     </tbody>
                 </table>
-                <!-- Button zum Buchen des Kurses -->
-                <button class="btn btn-outline-success btn-buchen" data-kursname="<?php echo $row['Kursname']; ?>">Kurs buchen</button>
+                <!-- Button zum Buchen des Kurses, nur sichtbar für Studenten -->
+                <?php if (!$isTutor) { ?>
+                    <button class="btn btn-outline-success btn-buchen" data-kursname="<?php echo $row['Kursname']; ?>">Kurs buchen</button>
+                <?php } ?>
             </div>
-
             <?php
         }
     } else {
