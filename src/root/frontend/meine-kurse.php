@@ -9,13 +9,6 @@
     <link rel="stylesheet" href="../css/style.css">
     <title>Profil</title>
     <style>
-        .profile-container {
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            max-width: 1200px;
-            margin: 0 auto;
-        }
         .profile-info {
             border: 1px solid #ccc;
             padding: 15px;
@@ -56,8 +49,10 @@
 
 
         // Gebuchte Kurse anzeigen
+        if(!isset($_SESSION['isTutor'])) {
             echo "<h3><b>Gebuchte Kurse</b></h3><br>";
             echo "<br>";
+        }
             if (mysqli_num_rows($result) > 0) {
                 while ($row = mysqli_fetch_assoc($result)) {
                     echo '<div class="profile-info">';
@@ -72,11 +67,10 @@
                     echo '<p><strong>Preis:</strong> ' . $row["Preis"] . ' Euro</p>';
                     echo '</div>';
                     echo '<br><br>';
-                    echo '<hr>';
                 }
             } else {
-                echo "Keine gebuchten Kurse gefunden.<br><br>";
-                echo '<hr>';
+                if(!isset($_SESSION['isTutor'])){
+                echo "Keine gebuchten Kurse gefunden.<br><br>";}
             }
 
 
