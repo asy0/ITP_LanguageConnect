@@ -11,7 +11,7 @@ session_start();
 
         <div class="collapse navbar-collapse justify-content-end" id="nvbCollapse">
             <ul class="navbar-nav ml-auto">
-                <li class="nav-item active pl-1">
+                <li class="nav-item  pl-1">
                     <a class="nav-link" href="../frontend/start.php"><i class="fa fa-home fa-fw mr-1"></i>Startseite</a>
                 </li>
                 <li class="nav-item pl-1">
