@@ -22,7 +22,7 @@
     <br><br><h1><b> Herzlich Willkommen  <?php echo $_SESSION['username'] ?>!</b></h1>
     <br><p> LanguageConnect wünscht dir einen schönen Tag... &#128516;&#128525;</p>
     <br><a href="../frontend/meine-kurse.php" role="button" type="button" class="btn btn-outline-info" >Meine Kurse &#128151; </a> </button>
-    <br><a href="../frontend/kursansicht.php" role="button" type="button" class="btn btn-outline-info" >Kursansicht &#128221; </a> </button>
+   <!-- <br><a href="../frontend/kursansicht.php" role="button" type="button" class="btn btn-outline-info" >Kursansicht &#128221; </a> </button> -->
     <br><a href="../frontend/myprofil.php" role="button" type="button" class="btn btn-outline-info" >Mein Profil &#128100; </a> </button>
     <br><a href="../frontend/kursliste.php" role="button" type="button" class="btn btn-outline-info" >Kursliste &#128218; </a> </button>
 
