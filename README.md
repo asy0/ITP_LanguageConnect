@@ -64,7 +64,4 @@ ITP Project
    - Stellen Sie sicher, dass alle PHP-Erweiterungen, die von Ihrem Projekt benötigt werden, in der `php.ini` von XAMPP aktiviert sind.
 
 
-**Team:**
-- Mahmood S.
-- Wendelin W.
-- Zeliha V.
+
