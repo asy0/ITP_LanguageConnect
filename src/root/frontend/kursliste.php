@@ -72,26 +72,26 @@
     <?php
     include_once "../backend/db_connect.php";
 
-    // Funktion zur Verbindung mit der Datenbank
     $db = getDBConnection();
-
-    // Benutzername aus der Session holen
     $currentuser = $_SESSION['username'];
 
-    // Überprüfen, ob der Benutzer ein Tutor ist
     $isTutor = isset($_SESSION['isTutor']) && $_SESSION['isTutor'];
 
-    if ($isTutor) {
+   if ($isTutor) {
         // SQL-Abfrage, um die vom Tutor erstellten Kursdaten abzurufen
-        $sql = "SELECT Kursname, Anbieter, Anbieter_Email, Sprache, Beschreibung, Kursformat, Zielgruppe, Kursdauer_Anfang, Kursdauer_Ende, Preis
+       /* $sql = "SELECT Kursname, Anbieter, Anbieter_Email, Sprache, Beschreibung, Kursformat, Zielgruppe, Kursdauer_Anfang, Kursdauer_Ende, Preis
                 FROM kurse 
-                WHERE Anbieter = '$currentuser'";
-    } else {
+                WHERE Anbieter = '$currentuser'";*/
+       $sql = "SELECT Kursname, Anbieter, Anbieter_Email, Sprache, Beschreibung, Kursformat, Zielgruppe, Kursdauer_Anfang, Kursdauer_Ende, Preis
+                FROM kurse ";
+
+   } else {
         // SQL-Abfrage, um die Kurse abzurufen, die der Student noch nicht gebucht hat
         $sql = "SELECT Kursname, Anbieter, Anbieter_Email, Sprache, Beschreibung, Kursformat, Zielgruppe, Kursdauer_Anfang, Kursdauer_Ende, Preis
                 FROM kurse 
                 WHERE KursID NOT IN (SELECT KursID FROM kurse WHERE Gebucht_von = '$currentuser')";
     }
+
 
     $result = $db->query($sql);
 
