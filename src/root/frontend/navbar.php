@@ -29,7 +29,7 @@ session_start();
                         <a class="nav-link" href="../frontend/kurserstellen.php"><i class="fa fa-sign-out fa-fw mr-1"></i>Kurs erstellen</a>
                     </li>
                     <li class="nav-item pl-1">
-                        <a class="nav-link" href="../frontend/profil-kurs.php"><i class="fa fa-sign-out fa-fw mr-1"></i>Profil</a>
+                        <a class="nav-link" href="../frontend/myprofil.php"><i class="fa fa-sign-out fa-fw mr-1"></i>Profil</a>
                     </li>
 
                 <?php elseif(isset($_SESSION['logged_in']) && !isset($_SESSION['isTutor'])): ?>
