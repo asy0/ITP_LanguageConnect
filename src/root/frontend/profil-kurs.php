@@ -22,7 +22,7 @@
 
     <div class="buttonbox">
     <a href="tutorprofil.php" class="button">Profilansicht</a>
-        <a href="kursansicht.php" class="button">Kursansicht</a>
+    <a href="kursansicht.php" class="button">Kursansicht</a>
     <a href="kursliste.php" class="button">Kursliste</a>
     </div>
 </main>
